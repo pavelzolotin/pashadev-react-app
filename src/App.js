@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: none;
   }
 
   html {
@@ -23,7 +24,6 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     font-family: 'Play', sans-serif;
     background: linear-gradient(to right, #16222a, #3a6073);
-    cursor: url('https://s.electerious.com/images/codepen/cursor.svg') 3 3, auto;
   }
 
   body:not(body:hover) .cursor::after {
@@ -57,44 +57,14 @@ const GlobalStyle = createGlobalStyle`
   ::-webkit-scrollbar-thumb {
     background: #3a6073;
   }
-
-  .cursor {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: var(--width);
-    height: var(--height);
-    transform: translate(calc(var(--x) - var(--width) / 2), calc(var(--y) - var(--height) / 2));
-    transition-duration: .1s;
-    transition-timing-function: cubic-bezier(.25, .25, .42, 1);
-    transition-property: width, height, transform;
-    z-index: 10;
-    pointer-events: none;
-    will-change: transform;
-
-    @media (pointer: fine) {
-      display: block;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border-radius: var(--radius);
-      border: .2rem solid #fff;
-      opacity: var(--scale);
-      transform: scale(var(--scale));
-      transition: .3s cubic-bezier(.25, .25, .42, 1) opacity,
-      .3s cubic-bezier(.25, .25, .42, 1) transform,
-      .3s cubic-bezier(.25, .25, .42, 1) border-radius;
-    }
+  
+  .sticky {
+    background-color: #16222a;
+    transition: background-color .5s;
   }
-`
-const Container = styled.div``
+`;
+
+const Container = styled.div``;
 
 function App() {
     return (

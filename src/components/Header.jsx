@@ -1,3 +1,4 @@
+import {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -18,6 +19,7 @@ const Container = styled.div`
   max-width: 100%;
   height: 8rem;
   padding: 0 7rem 0 7rem;
+  transition: background-color .5s;
 `;
 
 const Box = styled.div`
@@ -95,8 +97,20 @@ const Telegram = styled.div`
 `;
 
 const Header = () => {
+    const [sticky, setSticky] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener('scroll', isSticky);
+    })
+
+    const isSticky = () => {
+        const scrollTop = window.scrollY;
+        const stickyClass = scrollTop >= 50 ? 'sticky' : '';
+        setSticky(stickyClass)
+    }
+
     return (
-        <Container>
+        <Container className={sticky}>
             <Box>
                 <LogoBox>
                     <Link to="/">
