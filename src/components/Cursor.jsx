@@ -13,6 +13,11 @@ const CursorDot = styled.div`
   border-radius: 50%;
   opacity: 1;
   transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+  z-index: 10;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
 `;
 
 const CursorDotOutline = styled(CursorDot)`
@@ -20,7 +25,6 @@ const CursorDotOutline = styled(CursorDot)`
   height: 4rem;
   background-color: transparent;
   border: .2rem solid #ffffff;
-
 `;
 
 const Cursor = () => {
@@ -121,7 +125,7 @@ const Cursor = () => {
             <CursorDotOutline ref={dotOutline}></CursorDotOutline>
             <CursorDot ref={dot}></CursorDot>
         </>
-    )
+    );
 };
 
 export default Cursor;

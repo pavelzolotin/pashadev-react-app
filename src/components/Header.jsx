@@ -20,6 +20,11 @@ const Container = styled.div`
   height: 8rem;
   padding: 0 7rem 0 7rem;
   transition: background-color .5s;
+
+  @media (max-width: 767px) {
+    height: 100%;
+    padding: 0;
+  }
 `;
 
 const Box = styled.div`
@@ -34,16 +39,32 @@ const LogoBox = styled.div`
   align-items: center;
   width: 27rem;
   height: 5rem;
+
+  @media (max-width: 767px) {
+    margin-left: .7rem;
+  }
 `;
 
 const LogoImage = styled.img`
   width: 100%;
   cursor: pointer;
+
+  @media (max-width: 767px) {
+    width: 18rem;
+  }
 `;
 
 const Navigation = styled.div`
   display: flex;
   align-items: center;
+
+  @media (max-width: 767px) {
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+    height: 4rem;
+    padding: 0 2rem 1rem 2rem;
+  }
 `;
 
 const Language = styled.div`
@@ -54,15 +75,30 @@ const LanguageTitle = styled.span`
   font-size: 2rem;
   color: ${props => props.primary ? '#ffffff' : '#fd640d'};
   margin: 0 0.5rem 0 0.5rem;
+
+  @media (max-width: 767px) {
+    font-size: 1.8rem;
+    margin: 0 .7rem 0 .7rem;
+  }
 `;
 
 const Span = styled.span`
   font-size: 2rem;
   color: #fff;
+
+  @media (max-width: 767px) {
+    font-size: 1.8rem;
+  }
 `;
 
 const SocialIcons = styled.div`
   display: flex;
+
+  @media (max-width: 767px) {
+    position: absolute;
+    right: 2rem;
+    top: -2.3rem;
+  }
 `;
 
 const IconImage = styled.img`
@@ -77,23 +113,31 @@ const Github = styled.div`
   height: 5rem;
   margin: 0 3rem 0 3rem;
   cursor: pointer;
+
+  @media (max-width: 767px) {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1.5rem;
+  }
 `;
 
-const Mail = styled.div`
-  display: flex;
-  align-items: center;
-  width: 5rem;
-  height: 5rem;
-  margin-right: 3rem;
-  cursor: pointer;
+const Mail = styled(Github)`
+  margin: 0 3rem 0 0;
+
+  @media (max-width: 767px) {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 1.5rem 0 0;
+  }
 `;
 
-const Telegram = styled.div`
-  display: flex;
-  align-items: center;
-  width: 5rem;
-  height: 5rem;
-  cursor: pointer;
+const Telegram = styled(Github)`
+  margin: 0;
+  
+  @media (max-width: 767px) {
+    width: 4rem;
+    height: 4rem;
+  }
 `;
 
 const Header = () => {
