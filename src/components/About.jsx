@@ -235,12 +235,11 @@ const Img = styled.img`
 
 const CardText = styled.div`
   position: absolute;
-  bottom: -3.5rem;
-  left: -25%;
+  bottom: -4rem;
+  left: -10%;
   z-index: 100;
 
   @media (max-width: 767px) {
-    bottom: -3rem;
     left: 20%;
   }
 `;
