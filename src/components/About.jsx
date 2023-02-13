@@ -1,14 +1,14 @@
 import styled, {keyframes} from 'styled-components';
 
-import HTML from '../img/html-logo.png';
-import SCSS from '../img/scss-logo.png';
-import JavaScript from '../img/js-logo.png';
-import TypeScript from '../img/typescript-logo.png';
-import React from '../img/react-js-logo.png';
-import Redux from '../img/redux-logo.png';
-import Node from '../img/node-js-logo.png';
-import Git from '../img/git-logo.png';
-import Figma from '../img/figma-logo.png';
+import HTMLIcon from '../img/html-logo.png';
+import SCSSIcon from '../img/scss-logo.png';
+import JavaScriptIcon from '../img/js-logo.png';
+import TypeScriptIcon from '../img/typescript-logo.png';
+import ReactIcon from '../img/react-js-logo.png';
+import ReduxIcon from '../img/redux-logo.png';
+import NodeIcon from '../img/node-js-logo.png';
+import GitIcon from '../img/git-logo.png';
+import FigmaIcon from '../img/figma-logo.png';
 
 const drawLine = keyframes`
   from {
@@ -315,7 +315,7 @@ const About = () => {
                                 </Icon>
                             </CardBorder>
                             <Image className="about__card__image">
-                                <Img src={HTML} alt="" className="about__card__img"/>
+                                <Img src={HTMLIcon} alt="" className="about__card__img"/>
                             </Image>
                             <CardText>
                                 <CardTitle className="about__card__title">HTML</CardTitle>
@@ -341,7 +341,7 @@ const About = () => {
                                 </Icon>
                             </CardBorder>
                             <Image className="about__card__image">
-                                <Img src={SCSS} alt="" className="about__card__img"/>
+                                <Img src={SCSSIcon} alt="" className="about__card__img"/>
                             </Image>
                             <CardText>
                                 <CardTitle className="about__card__title">SCSS</CardTitle>
@@ -367,7 +367,7 @@ const About = () => {
                                 </Icon>
                             </CardBorder>
                             <Image className="about__card__image">
-                                <Img src={JavaScript} alt="" className="about__card__img"/>
+                                <Img src={JavaScriptIcon} alt="" className="about__card__img"/>
                             </Image>
                             <CardText>
                                 <CardTitle className="about__card__title">JavaScript</CardTitle>
@@ -393,7 +393,7 @@ const About = () => {
                                 </Icon>
                             </CardBorder>
                             <Image className="about__card__image">
-                                <Img src={TypeScript} alt="" className="about__card__img"/>
+                                <Img src={TypeScriptIcon} alt="" className="about__card__img"/>
                             </Image>
                             <CardText>
                                 <CardTitle className="about__card__title">TypeScript</CardTitle>
@@ -419,7 +419,7 @@ const About = () => {
                                 </Icon>
                             </CardBorder>
                             <Image className="about__card__image">
-                                <Img src={React} alt="" className="about__card__img"/>
+                                <Img src={ReactIcon} alt="" className="about__card__img"/>
                             </Image>
                             <CardText>
                                 <CardTitle className="about__card__title">React JS</CardTitle>
@@ -445,7 +445,7 @@ const About = () => {
                                 </Icon>
                             </CardBorder>
                             <Image className="about__card__image">
-                                <Img src={Redux} alt="" className="about__card__img"/>
+                                <Img src={ReduxIcon} alt="" className="about__card__img"/>
                             </Image>
                             <CardText>
                                 <CardTitle className="about__card__title">Redux</CardTitle>
@@ -471,7 +471,7 @@ const About = () => {
                                 </Icon>
                             </CardBorder>
                             <Image className="about__card__image">
-                                <Img src={Node} alt="" className="about__card__img"/>
+                                <Img src={NodeIcon} alt="" className="about__card__img"/>
                             </Image>
                             <CardText>
                                 <CardTitle className="about__card__title">Node JS</CardTitle>
@@ -497,7 +497,7 @@ const About = () => {
                                 </Icon>
                             </CardBorder>
                             <Image className="about__card__image">
-                                <Img src={Git} alt="" className="about__card__img"/>
+                                <Img src={GitIcon} alt="" className="about__card__img"/>
                             </Image>
                             <CardText>
                                 <CardTitle className="about__card__title">Git</CardTitle>
@@ -523,7 +523,7 @@ const About = () => {
                                 </Icon>
                             </CardBorder>
                             <Image className="about__card__image">
-                                <Img src={Figma} alt="" className="about__card__img"/>
+                                <Img src={FigmaIcon} alt="" className="about__card__img"/>
                             </Image>
                             <CardText>
                                 <CardTitle className="about__card__title">Figma</CardTitle>
