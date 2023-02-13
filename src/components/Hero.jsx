@@ -12,12 +12,12 @@ const Container = styled.div`
   margin: auto;
 
   @media (max-width: 767px) {
-    display: flex;
     flex-direction: column-reverse;
     justify-content: flex-end;
     margin-top: 1rem;
   }
 `;
+
 const Cards = styled.div`
   position: absolute;
   width: 100%;
@@ -27,6 +27,7 @@ const Cards = styled.div`
     display: none;
   }
 `;
+
 const CardItem = styled.div`
   position: absolute;
   width: 17rem;
@@ -296,7 +297,7 @@ const ButtonIconRect = styled.rect`
   stroke-width: 5;
   stroke-dasharray: 435, 0;
   transition: all 1s linear;
-`
+`;
 
 const ButtonText = styled.span`
   position: relative;
@@ -358,8 +359,8 @@ const Hero = () => {
                     <TextTitle>Привет! <br/>Меня зовут <TitleSpan>Павел</TitleSpan></TextTitle>
                     <Description>Я web-разработчик, создаю интерфейсы для компаний по всему миру</Description>
                 </Text>
-                <Button className="hero__button">
-                    <a href="https://t.me/pavelzolotin" className="hero__btn">
+                <Button>
+                    <a href="https://t.me/pavelzolotin">
                         <ButtonIcon>
                             <ButtonIconRect x="0" y="0" fill="none" width="100%" height="100%" className="rect"/>
                         </ButtonIcon>
