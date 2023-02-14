@@ -145,13 +145,13 @@ const Header = () => {
 
     useEffect(() => {
         window.addEventListener('scroll', isSticky);
-    })
+    });
 
     const isSticky = () => {
         const scrollTop = window.scrollY;
         const stickyClass = scrollTop >= 50 ? 'sticky' : '';
-        setSticky(stickyClass)
-    }
+        setSticky(stickyClass);
+    };
 
     return (
         <Container className={sticky}>
@@ -185,7 +185,7 @@ const Header = () => {
                 </Navigation>
             </Box>
         </Container>
-    )
+    );
 };
 
 export default Header;

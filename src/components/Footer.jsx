@@ -1,3 +1,4 @@
+import {useEffect, useRef} from 'react';
 import styled from 'styled-components';
 
 import Logo from '../img/logo.png';
@@ -226,85 +227,104 @@ const CopyDescription = styled.p`
 `;
 
 const Footer = () => {
+    const ref = useRef(null);
+
+    const footerAnimationWidth = window.innerWidth / 7;
+    const footerAnimationHeight = window.innerHeight / 20;
+
+    useEffect(() => {
+        cardsAnimation();
+    });
+
+    const cardsAnimation = () => {
+        const footerCards = ref.current;
+
+        footerCards.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX / footerAnimationWidth;
+            const mouseY = e.clientY / footerAnimationHeight;
+            footerCards.style.transform = `translate3d(-${mouseX}%, -${mouseY}%, 0)`;
+        });
+    };
+
     return (
         <Container>
-            <Cards className="footer__cards">
-                <Card className="footer__cards-item">
+            <Cards ref={ref}>
+                <Card>
                     <CardImg src={CurlyBracketsIcon} alt=""/>
                 </Card>
-                <Card className="footer__cards-item">
+                <Card>
                     <CardImg src={SourceCodeIcon} alt=""/>
                 </Card>
-                <Card className="footer__cards-item">
+                <Card>
                     <CardImg src={ReactIcon} alt=""/>
                 </Card>
-                <Card className="footer__cards-item">
+                <Card>
                     <CardImg src={JSIcon} alt=""/>
                 </Card>
-                <Card className="footer__cards-item">
+                <Card>
                     <CardImg src={SquareBracketsIcon} alt=""/>
                 </Card>
-                <Card className="footer__cards-item">
+                <Card>
                     <CardImg src={CurlyBracketsIcon} alt=""/>
                 </Card>
-                <Card className="footer__cards-item">
+                <Card>
                     <CardImg src={SourceCodeIcon} alt=""/>
                 </Card>
-                <Card className="footer__cards-item">
+                <Card>
                     <CardImg src={ReactIcon} alt=""/>
                 </Card>
-                <Card className="footer__cards-item">
+                <Card>
                     <CardImg src={JSIcon} alt=""/>
                 </Card>
-                <Card className="footer__cards-item">
+                <Card>
                     <CardImg src={SquareBracketsIcon} alt=""/>
                 </Card>
-                <Card className="footer__cards-item">
+                <Card>
                     <CardImg src={CurlyBracketsIcon} alt=""/>
                 </Card>
-                <Card className="footer__cards-item">
+                <Card>
                     <CardImg src={SourceCodeIcon} alt=""/>
                 </Card>
-                <Card className="footer__cards-item">
+                <Card>
                     <CardImg src={ReactIcon} alt=""/>
                 </Card>
-                <Card className="footer__cards-item">
+                <Card>
                     <CardImg src={JSIcon} alt=""/>
                 </Card>
-                <Card className="footer__cards-item">
+                <Card>
                     <CardImg src={SquareBracketsIcon} alt=""/>
                 </Card>
-                <Card className="footer__cards-item">
+                <Card>
                     <CardImg src={CurlyBracketsIcon} alt=""/>
                 </Card>
             </Cards>
-            <Wrapper className="footer__wrapper">
-                <LogoBox className="footer__logo-wrapper">
-                    <a href="https://pashadev.ru" className="footer__logo-link">
-                        <LogoImg src={Logo} alt="Logo" className="footer__logo"/>
+            <Wrapper>
+                <LogoBox>
+                    <a href="https://pashadev.ru">
+                        <LogoImg src={Logo} alt="Logo"/>
                     </a>
                 </LogoBox>
-                <Navigation className="footer__nav">
-                    <NavIcon className="footer__nav-icon--github">
+                <Navigation>
+                    <NavIcon>
                         <a href="https://github.com/pavelzolotin" target="_blank" rel="noreferrer">
                             <NavIconImg src={GithubIcon} alt="footer-github-icon"/>
                         </a>
                     </NavIcon>
-                    <NavIcon className="footer__nav-icon--mail">
+                    <NavIcon>
                         <a href="mailto:zolotinpavel@gmail.com">
                             <NavIconImg src={MailIcon} alt="footer-mail-icon"/>
                         </a>
                     </NavIcon>
-                    <NavIcon className="footer__nav-icon--telegram">
+                    <NavIcon>
                         <a href="https://t.me/pavelzolotin" target="_blank" rel="noreferrer">
                             <NavIconImg src={TelegramIcon} alt="footer-telegram-icon"/>
                         </a>
                     </NavIcon>
                 </Navigation>
-                <Text className="footer__text">
+                <Text>
                     <TextDescription>Eat. Sleep. Code. Repeat</TextDescription>
                 </Text>
-                <Copyright className="footer__copyright">
+                <Copyright>
                     <CopyDescription>&copy; 2019 - 2023 PASHADEV</CopyDescription>
                 </Copyright>
             </Wrapper>
