@@ -12,102 +12,302 @@ import SquareBracketsIcon from '../img/footer-square-brackets.png';
 
 const Container = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
-  max-width: 132rem;
+  width: 100%;
+  height: 100vh;
+  margin: 10rem auto 0 auto;
+`;
+
+const Cards = styled.div`
+  position: absolute;
+  width: 100%;
   height: 100%;
-  margin: 12rem auto 0 auto;
+  z-index: 0;
+  transition: transform .3s;
 
   @media (max-width: 767px) {
-    margin: 6rem auto 0 auto;
+    display: none;
   }
+`;
+
+const Card = styled.div`
+  &:nth-child(1) {
+    position: absolute;
+    top: 51%;
+    left: 29%;
+  }
+
+  &:nth-child(2) {
+    position: absolute;
+    bottom: 22%;
+    left: 6%;
+  }
+
+  &:nth-child(3) {
+    position: absolute;
+    bottom: 28%;
+    right: 8%;
+  }
+
+  &:nth-child(4) {
+    position: absolute;
+    top: 50%;
+    right: 23%;
+  }
+
+  &:nth-child(5) {
+    position: absolute;
+    bottom: 18%;
+    right: 0;
+  }
+
+  &:nth-child(6) {
+    position: absolute;
+    top: 33%;
+    right: 2%;
+  }
+
+  &:nth-child(7) {
+    position: absolute;
+    bottom: 9%;
+    right: 14%;
+  }
+
+  &:nth-child(8) {
+    position: absolute;
+    top: 18%;
+    left: 30%;
+  }
+
+  &:nth-child(9) {
+    position: absolute;
+    bottom: 2%;
+    left: 22%;
+  }
+
+  &:nth-child(10) {
+    position: absolute;
+    top: 32%;
+    left: 14%;
+  }
+
+  &:nth-child(11) {
+    position: absolute;
+    top: 12%;
+    right: 37%;
+  }
+
+  &:nth-child(12) {
+    position: absolute;
+    bottom: 28%;
+    right: 35%;
+  }
+
+  &:nth-child(13) {
+    position: absolute;
+    bottom: 5%;
+    right: 32%;
+  }
+
+  &:nth-child(14) {
+    position: absolute;
+    top: 28%;
+    left: 48%;
+  }
+
+  &:nth-child(15) {
+    position: absolute;
+    top: 22%;
+    right: 18%;
+  }
+
+  &:nth-child(16) {
+    position: absolute;
+    bottom: 12%;
+    left: 36%;
+  }
+`;
+
+const CardImg = styled.img`
+  opacity: .3;
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+`;
+
+const LogoBox = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 32rem;
+  height: 5rem;
+  z-index: 1;
+`;
+
+const LogoImg = styled.img`
+  width: 100%;
+`;
+
+const Navigation = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7rem;
+  z-index: 1;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+`;
+
+const NavIcon = styled.div`
+  display: flex;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  margin: 0 2rem 0 0;
+
+  @media (max-width: 767px) {
+    margin: 3rem 0 0 0;
+  }
+
+  &:nth-child(2) {
+    margin-right: 2rem;
+
+    @media (max-width: 767px) {
+      margin: 3rem 0 0 0;
+    }
+  }
+
+  &:nth-child(3) {
+    @media (max-width: 767px) {
+      margin-top: 3rem;
+    }
+  }
+`;
+
+const NavIconImg = styled.img`
+  width: 100%;
+  height: 100%;
+`;
+
+const Text = styled.div`
+  margin-top: 7rem;
+`;
+
+const TextDescription = styled.p`
+  font-size: 3.7rem;
+  text-align: center;
+  color: #fff;
+
+  @media (max-width: 767px) {
+    font-size: 2.7rem;
+  }
+`;
+
+const Copyright = styled.div`
+  position: absolute;
+  width: 100%;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+
+const CopyDescription = styled.p`
+  font-size: 1.6rem;
+  text-align: center;
+  color: #fff;
 `;
 
 const Footer = () => {
     return (
         <Container>
-            <div className="footer__cards">
-                <div className="footer__cards-item">
-                    <img src={CurlyBracketsIcon} alt=""/>
-                </div>
-                <div className="footer__cards-item">
-                    <img src={SourceCodeIcon} alt=""/>
-                </div>
-                <div className="footer__cards-item">
-                    <img src={ReactIcon} alt=""/>
-                </div>
-                <div className="footer__cards-item">
-                    <img src={JSIcon} alt=""/>
-                </div>
-                <div className="footer__cards-item">
-                    <img src={SquareBracketsIcon} alt=""/>
-                </div>
-                <div className="footer__cards-item">
-                    <img src={CurlyBracketsIcon} alt=""/>
-                </div>
-                <div className="footer__cards-item">
-                    <img src={SourceCodeIcon} alt=""/>
-                </div>
-                <div className="footer__cards-item">
-                    <img src={ReactIcon} alt=""/>
-                </div>
-                <div className="footer__cards-item">
-                    <img src={JSIcon} alt=""/>
-                </div>
-                <div className="footer__cards-item">
-                    <img src={SquareBracketsIcon} alt=""/>
-                </div>
-                <div className="footer__cards-item">
-                    <img src={CurlyBracketsIcon} alt=""/>
-                </div>
-                <div className="footer__cards-item">
-                    <img src={SourceCodeIcon} alt=""/>
-                </div>
-                <div className="footer__cards-item">
-                    <img src={ReactIcon} alt=""/>
-                </div>
-                <div className="footer__cards-item">
-                    <img src={JSIcon} alt=""/>
-                </div>
-                <div className="footer__cards-item">
-                    <img src={SquareBracketsIcon} alt=""/>
-                </div>
-                <div className="footer__cards-item">
-                    <img src={CurlyBracketsIcon} alt=""/>
-                </div>
-            </div>
-            <div className="footer__wrapper">
-                <div className="footer__logo-wrapper">
+            <Cards className="footer__cards">
+                <Card className="footer__cards-item">
+                    <CardImg src={CurlyBracketsIcon} alt=""/>
+                </Card>
+                <Card className="footer__cards-item">
+                    <CardImg src={SourceCodeIcon} alt=""/>
+                </Card>
+                <Card className="footer__cards-item">
+                    <CardImg src={ReactIcon} alt=""/>
+                </Card>
+                <Card className="footer__cards-item">
+                    <CardImg src={JSIcon} alt=""/>
+                </Card>
+                <Card className="footer__cards-item">
+                    <CardImg src={SquareBracketsIcon} alt=""/>
+                </Card>
+                <Card className="footer__cards-item">
+                    <CardImg src={CurlyBracketsIcon} alt=""/>
+                </Card>
+                <Card className="footer__cards-item">
+                    <CardImg src={SourceCodeIcon} alt=""/>
+                </Card>
+                <Card className="footer__cards-item">
+                    <CardImg src={ReactIcon} alt=""/>
+                </Card>
+                <Card className="footer__cards-item">
+                    <CardImg src={JSIcon} alt=""/>
+                </Card>
+                <Card className="footer__cards-item">
+                    <CardImg src={SquareBracketsIcon} alt=""/>
+                </Card>
+                <Card className="footer__cards-item">
+                    <CardImg src={CurlyBracketsIcon} alt=""/>
+                </Card>
+                <Card className="footer__cards-item">
+                    <CardImg src={SourceCodeIcon} alt=""/>
+                </Card>
+                <Card className="footer__cards-item">
+                    <CardImg src={ReactIcon} alt=""/>
+                </Card>
+                <Card className="footer__cards-item">
+                    <CardImg src={JSIcon} alt=""/>
+                </Card>
+                <Card className="footer__cards-item">
+                    <CardImg src={SquareBracketsIcon} alt=""/>
+                </Card>
+                <Card className="footer__cards-item">
+                    <CardImg src={CurlyBracketsIcon} alt=""/>
+                </Card>
+            </Cards>
+            <Wrapper className="footer__wrapper">
+                <LogoBox className="footer__logo-wrapper">
                     <a href="https://pashadev.ru" className="footer__logo-link">
-                        <img src={Logo} alt="Logo" className="footer__logo"/>
+                        <LogoImg src={Logo} alt="Logo" className="footer__logo"/>
                     </a>
-                </div>
-                <div className="footer__nav">
-                    <div className="footer__nav-icon--github">
+                </LogoBox>
+                <Navigation className="footer__nav">
+                    <NavIcon className="footer__nav-icon--github">
                         <a href="https://github.com/pavelzolotin" target="_blank" rel="noreferrer">
-                            <img src={GithubIcon} alt="footer-github-icon"/>
+                            <NavIconImg src={GithubIcon} alt="footer-github-icon"/>
                         </a>
-                    </div>
-                    <div className="footer__nav-icon--mail">
+                    </NavIcon>
+                    <NavIcon className="footer__nav-icon--mail">
                         <a href="mailto:zolotinpavel@gmail.com">
-                            <img src={MailIcon} alt="footer-mail-icon"/>
+                            <NavIconImg src={MailIcon} alt="footer-mail-icon"/>
                         </a>
-                    </div>
-                    <div className="footer__nav-icon--telegram">
+                    </NavIcon>
+                    <NavIcon className="footer__nav-icon--telegram">
                         <a href="https://t.me/pavelzolotin" target="_blank" rel="noreferrer">
-                            <img src={TelegramIcon} alt="footer-telegram-icon"/>
+                            <NavIconImg src={TelegramIcon} alt="footer-telegram-icon"/>
                         </a>
-                    </div>
-                </div>
-                <div className="footer__text">
-                    <p>Eat. Sleep. Code. Repeat</p>
-                </div>
-                <div className="footer__copyright">
-                    <p>&copy; 2019-2023 PASHADEV</p>
-                </div>
-            </div>
+                    </NavIcon>
+                </Navigation>
+                <Text className="footer__text">
+                    <TextDescription>Eat. Sleep. Code. Repeat</TextDescription>
+                </Text>
+                <Copyright className="footer__copyright">
+                    <CopyDescription>&copy; 2019 - 2023 PASHADEV</CopyDescription>
+                </Copyright>
+            </Wrapper>
         </Container>
     );
 };
