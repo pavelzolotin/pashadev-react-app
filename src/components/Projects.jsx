@@ -1,7 +1,13 @@
+import {useRef, useLayoutEffect} from 'react';
+
+import gsap from 'gsap';
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import styled from 'styled-components';
 
 import Cinematika from '../img/cinematika-screen-one-large.png';
 import NewTube from '../img/newtube-screen-dark-one-large.png';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Container = styled.div`
   display: flex;
@@ -122,6 +128,41 @@ const Buttons = styled.div`
 `;
 
 const Button = styled.button`
+  position: relative;
+  padding: 1.2rem 3rem;
+  font-family: 'Play', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: .3rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: .2rem solid #fd640d;
+  border-radius: 0.5rem;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.19), 0 .5rem .3rem -.2rem rgba(0, 0, 0, 0.23);
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: 1s all;
+    background-color: #fd640d59;
+    color: #fff;
+  }
+
+  &:hover {
+    &::after {
+      transform: translateX(100%);
+    }
+  }
+
   &:nth-child(1) {
     margin-right: 5rem;
   }
@@ -132,19 +173,47 @@ const Button = styled.button`
 `;
 
 const Projects = () => {
+    const main = useRef();
+
+    useLayoutEffect(() => {
+        const ctx = gsap.context(self => {
+            const projects = self.selector('.project');
+
+            projects.forEach(proj => {
+                let wrap = proj.querySelector('.project__wrap');
+                let animationWrap = wrap.querySelector('.project__animation-wrap');
+                let getToValue = () => -(animationWrap.scrollWidth - window.innerWidth);
+
+                gsap.fromTo(animationWrap, {
+                    x: () => animationWrap ? 0 : getToValue()
+                }, {
+                    x: () => animationWrap ? getToValue() : 0,
+                    scrollTrigger: {
+                        trigger: proj,
+                        start: 'top top',
+                        end: () => "+=" + (animationWrap.scrollWidth - window.innerWidth),
+                        pin: wrap,
+                        scrub: true,
+                    },
+                });
+            });
+        }, main);
+        return () => ctx.revert();
+    });
+
     return (
-        <Container>
-            <Title className="section-projects__title">
+        <Container ref={main}>
+            <Title>
                 <H2>Примеры некоторых работ</H2>
             </Title>
             <Project className="project">
                 <Wrap className="project__wrap">
-                    <AnimationWrap className="project__animation-wrap to-right">
-                        <Image className="project__image">
+                    <AnimationWrap className="project__animation-wrap">
+                        <Image>
                             <Img src={Cinematika} alt=""/>
                         </Image>
-                        <Details className="project__details">
-                            <ProjectTitle className="project__title">
+                        <Details>
+                            <ProjectTitle>
                                 <ProjectH2>Cinematika</ProjectH2>
                             </ProjectTitle>
                             <Description>
@@ -158,7 +227,7 @@ const Projects = () => {
                                 <br/>Styled-components
                                 <br/>Material UI
                             </Description>
-                            <Buttons className="project__btns">
+                            <Buttons>
                                 <Button>
                                     <a href="https://github.com/pavelzolotin/movie-react-app"
                                        className="project__btn">Github</a>
@@ -173,12 +242,12 @@ const Projects = () => {
             </Project>
             <Project className="project">
                 <Wrap className="project__wrap">
-                    <AnimationWrap className="project__animation-wrap to-right">
-                        <Image className="project__image">
+                    <AnimationWrap className="project__animation-wrap">
+                        <Image>
                             <Img src={NewTube} alt=""/>
                         </Image>
-                        <Details className="project__details">
-                            <ProjectTitle className="project__title">
+                        <Details>
+                            <ProjectTitle>
                                 <ProjectH2>NewTube</ProjectH2>
                             </ProjectTitle>
                             <Description>
@@ -197,7 +266,7 @@ const Projects = () => {
                                 <br/>Styled-components
                                 <br/>Material UI
                             </Description>
-                            <Buttons className="project__btns">
+                            <Buttons>
                                 <Button>
                                     <a href="https://github.com/pavelzolotin/youtube-clone-react-app"
                                        className="project__btn">Github</a>
