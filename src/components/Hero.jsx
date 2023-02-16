@@ -1,3 +1,5 @@
+import {useEffect, useRef} from 'react';
+
 import styled from 'styled-components';
 
 import HeroImg from '../img/hero-img.png';
@@ -260,7 +262,7 @@ const Button = styled.button`
     top: 0;
     left: 0;
     display: block;
-    background: rgba(255,255,255,.1);
+    background: rgba(255, 255, 255, .1);
     width: 0;
     height: 100%;
     transition: width 1s;
@@ -335,22 +337,48 @@ const Img = styled.img`
 `;
 
 const Hero = () => {
+    const wrapper = useRef(null);
+    const heroCards = useRef(null);
+    const heroImage = useRef(null);
+
+    useEffect(() => {
+        cardsAnimation();
+    });
+
+    const cardsAnimation = () => {
+        const wrap = wrapper.current;
+        const cards = heroCards.current;
+        const image = heroImage.current;
+
+        wrap.addEventListener('mousemove', (e) => {
+            const cardMoveX = e.clientX / (window.innerWidth / 5);
+            const cardMoveY = e.clientY / (window.innerHeight / 8);
+            const imageMoveX = e.clientY / (window.innerWidth / 10);
+            const imageMoveY = e.clientY / (window.innerHeight / 15);
+
+            cards.style.transform = `translate3d(-${cardMoveX}%, -${cardMoveY}%, 0)`;
+            cards.style.transitionDuration = '2s';
+            image.style.transform = `translate3d(-${imageMoveX}%, -${imageMoveY}%, 0)`;
+            image.style.transitionDuration = '2s';
+        });
+    };
+
     return (
-        <Container box>
-            <Cards>
-                <CardItem data-value="2">
+        <Container ref={wrapper}>
+            <Cards ref={heroCards}>
+                <CardItem>
                     <CardTitle>JavaScript</CardTitle>
                 </CardItem>
-                <CardItem data-value="3">
+                <CardItem>
                     <CardTitle>React JS</CardTitle>
                 </CardItem>
-                <CardItem data-value="4">
+                <CardItem>
                     <CardTitle>Node JS</CardTitle>
                 </CardItem>
-                <CardItem data-value="5">
+                <CardItem>
                     <CardTitle>SCSS</CardTitle>
                 </CardItem>
-                <CardItem data-value="6">
+                <CardItem>
                     <CardTitle>TypeScript</CardTitle>
                 </CardItem>
             </Cards>
@@ -369,7 +397,7 @@ const Hero = () => {
                 </Button>
             </TextBox>
             <HeroImage>
-                <Img src={HeroImg} alt="" data-value="7"/>
+                <Img src={HeroImg} alt="hero-image" ref={heroImage}/>
             </HeroImage>
         </Container>
     );
