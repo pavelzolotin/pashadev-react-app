@@ -63,6 +63,12 @@ const GlobalStyle = createGlobalStyle`
     background-color: #16222a;
     transition: background-color .5s;
   }
+
+  .cursor-bigger {
+    width: 6rem;
+    height: 6rem;
+    transition: width .3s, height .3s;
+  }
   
   .dot-color {
     background-color: rgba(253, 100, 13, 0.5);

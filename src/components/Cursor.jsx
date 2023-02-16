@@ -12,7 +12,7 @@ const CursorDot = styled.div`
   transform: translate(-50%, -50%);
   border-radius: 50%;
   opacity: 1;
-  transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+  transition: width .3s, height .3s, transform .3s;
   z-index: 10;
 
   @media (max-width: 767px) {
@@ -25,7 +25,7 @@ const CursorDotOutline = styled(CursorDot)`
   height: 4rem;
   background-color: transparent;
   border: .2rem solid #ffffff;
-  transition: background-color .5s;
+  transition: width .3s, height .3s, transform .3s;
 `;
 
 const Cursor = () => {
@@ -73,11 +73,9 @@ const Cursor = () => {
 
     const toggleCursorSize = () => {
         if (cursorEnlarged.current) {
-            dot.current.style.transform = `translate(-50%, -50%) scale(0.75)`;
-            dotOutline.current.style.transform = `translate(-50%, -50%) scale(1.5)`;
+            dotOutline.current.classList.add('cursor-bigger');
         } else {
-            dot.current.style.transform = `translate(-50%, -50%) scale(1)`;
-            dotOutline.current.style.transform = `translate(-50%, -50%) scale(1)`;
+            dotOutline.current.classList.remove('cursor-bigger');
         }
     };
 
@@ -87,12 +85,14 @@ const Cursor = () => {
                 cursorEnlarged.current = true;
                 toggleCursorSize();
                 dotOutline.current.classList.add('dot-color');
+                dotOutline.current.style.transition = 'width .3s, height .3s, background-color .5s';
             });
 
-            el.addEventListener('mouseout', () => {
+            el.addEventListener('mouseleave', () => {
                 cursorEnlarged.current = false;
                 toggleCursorSize();
                 dotOutline.current.classList.remove('dot-color');
+                dotOutline.current.style.transition = 'width .3s, height .3s, background-color .5s';
             });
         });
     };
