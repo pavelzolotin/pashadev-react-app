@@ -37,7 +37,7 @@ const Cursor = () => {
     const _x = useRef(0);
     const _y = useRef(0);
     const requestRef = useRef(null);
-    const delay = 10;
+    const delay = 9;
 
     useEffect(() => {
         document.addEventListener('mousedown', mouseOverEvent);

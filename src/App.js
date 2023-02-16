@@ -13,7 +13,6 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none;
   }
 
   html {
@@ -25,6 +24,7 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     font-family: 'Play', sans-serif;
     background: linear-gradient(to right, #16222a, #3a6073);
+    cursor: none;
   }
 
   body:not(body:hover) .cursor::after {
@@ -36,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: transparent;
     outline: none;
     border: none;
+    cursor: pointer;
   }
 
   a {

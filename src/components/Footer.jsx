@@ -227,7 +227,7 @@ const CopyDescription = styled.p`
 `;
 
 const Footer = () => {
-    const ref = useRef(null);
+    const footerCards = useRef(null);
 
     const footerAnimationWidth = window.innerWidth / 7;
     const footerAnimationHeight = window.innerHeight / 20;
@@ -237,18 +237,18 @@ const Footer = () => {
     });
 
     const cardsAnimation = () => {
-        const footerCards = ref.current;
+        const cards = footerCards.current;
 
-        footerCards.addEventListener('mousemove', (e) => {
+        cards.addEventListener('mousemove', (e) => {
             const mouseX = e.clientX / footerAnimationWidth;
             const mouseY = e.clientY / footerAnimationHeight;
-            footerCards.style.transform = `translate3d(-${mouseX}%, -${mouseY}%, 0)`;
+            cards.style.transform = `translate3d(-${mouseX}%, -${mouseY}%, 0)`;
         });
     };
 
     return (
         <Container>
-            <Cards ref={ref}>
+            <Cards ref={footerCards}>
                 <Card>
                     <CardImg src={CurlyBracketsIcon} alt=""/>
                 </Card>
