@@ -25,6 +25,7 @@ const CursorDotOutline = styled(CursorDot)`
   height: 4rem;
   background-color: transparent;
   border: .2rem solid #ffffff;
+  transition: background-color .5s;
 `;
 
 const Cursor = () => {
@@ -47,6 +48,7 @@ const Cursor = () => {
         document.addEventListener('mouseleave', mouseLeaveEvent);
 
         animateDotOutline();
+        handleLinkHovers();
 
         return () => {
             document.removeEventListener('mousedown', mouseOverEvent);
@@ -77,6 +79,22 @@ const Cursor = () => {
             dot.current.style.transform = `translate(-50%, -50%) scale(1)`;
             dotOutline.current.style.transform = `translate(-50%, -50%) scale(1)`;
         }
+    };
+
+    const handleLinkHovers = () => {
+        document.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('mouseover', () => {
+                cursorEnlarged.current = true;
+                toggleCursorSize();
+                dotOutline.current.classList.add('dot-color');
+            });
+
+            el.addEventListener('mouseout', () => {
+                cursorEnlarged.current = false;
+                toggleCursorSize();
+                dotOutline.current.classList.remove('dot-color');
+            });
+        });
     };
 
     const mouseOverEvent = () => {
