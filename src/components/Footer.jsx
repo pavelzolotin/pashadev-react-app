@@ -167,7 +167,7 @@ const Navigation = styled.div`
   }
 `;
 
-const NavIcon = styled.div`
+const NavIcon = styled.button`
   display: flex;
   align-items: center;
   width: 5rem;

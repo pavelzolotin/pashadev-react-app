@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: none;
   }
 
   html {
@@ -31,12 +32,11 @@ const GlobalStyle = createGlobalStyle`
     opacity: 0;
     transform: scale(0);
   }
-
+  
   button {
     background-color: transparent;
     outline: none;
     border: none;
-    cursor: pointer;
   }
 
   a {
@@ -44,7 +44,6 @@ const GlobalStyle = createGlobalStyle`
     color: #fff;
     letter-spacing: .1rem;
     text-decoration: none;
-    cursor: pointer;
   }
 
   ::-webkit-scrollbar {
@@ -62,6 +61,11 @@ const GlobalStyle = createGlobalStyle`
   
   .sticky {
     background-color: #16222a;
+    transition: background-color .5s;
+  }
+  
+  .dot-color {
+    background-color: rgba(253, 100, 13, 0.5);
     transition: background-color .5s;
   }
 `;

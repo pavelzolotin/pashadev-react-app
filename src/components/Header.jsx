@@ -47,7 +47,6 @@ const LogoBox = styled.div`
 
 const LogoImage = styled.img`
   width: 100%;
-  cursor: pointer;
 
   @media (max-width: 767px) {
     width: 18rem;
@@ -101,12 +100,7 @@ const SocialIcons = styled.div`
   }
 `;
 
-const IconImage = styled.img`
-  width: 100%;
-  height: 100%;
-`;
-
-const Github = styled.div`
+const NavIcon = styled.button`
   display: flex;
   align-items: center;
   width: 5rem;
@@ -119,25 +113,30 @@ const Github = styled.div`
     height: 4rem;
     margin-right: 1.5rem;
   }
-`;
 
-const Mail = styled(Github)`
-  margin: 0 3rem 0 0;
+  &:nth-child(2) {
+    margin: 0 3rem 0 0;
 
-  @media (max-width: 767px) {
-    width: 4rem;
-    height: 4rem;
-    margin: 0 1.5rem 0 0;
+    @media (max-width: 767px) {
+      width: 4rem;
+      height: 4rem;
+      margin: 0 1.5rem 0 0;
+    }
+  }
+
+  &:nth-child(3) {
+    margin: 0;
+
+    @media (max-width: 767px) {
+      width: 4rem;
+      height: 4rem;
+    }
   }
 `;
 
-const Telegram = styled(Github)`
-  margin: 0;
-  
-  @media (max-width: 767px) {
-    width: 4rem;
-    height: 4rem;
-  }
+const NavIconImg = styled.img`
+  width: 100%;
+  height: 100%;
 `;
 
 const Header = () => {
@@ -172,15 +171,15 @@ const Header = () => {
                         </Link>
                     </Language>
                     <SocialIcons>
-                        <Github>
-                            <IconImage src={GithubIcon} alt="github-icon"/>
-                        </Github>
-                        <Mail>
-                            <IconImage src={MailIcon} alt="mail-icon"/>
-                        </Mail>
-                        <Telegram>
-                            <IconImage src={TelegramIcon} alt="telegram-icon"/>
-                        </Telegram>
+                        <NavIcon>
+                            <NavIconImg src={GithubIcon} alt="github-icon"/>
+                        </NavIcon>
+                        <NavIcon>
+                            <NavIconImg src={MailIcon} alt="mail-icon"/>
+                        </NavIcon>
+                        <NavIcon>
+                            <NavIconImg src={TelegramIcon} alt="telegram-icon"/>
+                        </NavIcon>
                     </SocialIcons>
                 </Navigation>
             </Box>
