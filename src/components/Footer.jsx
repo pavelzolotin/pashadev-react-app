@@ -10,6 +10,7 @@ import SourceCodeIcon from '../img/footer-source-code.png';
 import ReactIcon from '../img/footer-react.png';
 import JSIcon from '../img/footer-js.png';
 import SquareBracketsIcon from '../img/footer-square-brackets.png';
+import {Link} from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
@@ -164,32 +165,31 @@ const Navigation = styled.div`
 
   @media (max-width: 767px) {
     flex-direction: column;
+    margin-top: 5rem;
   }
 `;
 
-const NavIcon = styled.button`
+const Github = styled.button`
   display: flex;
   align-items: center;
   width: 5rem;
   height: 5rem;
-  margin: 0 2rem 0 0;
+  margin: 0 1.5rem 0 1.5rem;
 
   @media (max-width: 767px) {
     margin: 3rem 0 0 0;
   }
+`;
 
-  &:nth-child(2) {
-    margin-right: 2rem;
-
-    @media (max-width: 767px) {
-      margin: 3rem 0 0 0;
-    }
+const Mail = styled(Github)`
+  @media (max-width: 767px) {
+    margin: 3rem 0 0 0;
   }
+`;
 
-  &:nth-child(3) {
-    @media (max-width: 767px) {
-      margin-top: 3rem;
-    }
+const Telegram = styled(Github)`
+  @media (max-width: 767px) {
+    margin-top: 3rem;
   }
 `;
 
@@ -305,21 +305,21 @@ const Footer = () => {
                     </a>
                 </LogoBox>
                 <Navigation>
-                    <NavIcon>
-                        <a href="https://github.com/pavelzolotin" target="_blank" rel="noreferrer">
+                    <Link to="https://github.com/pavelzolotin">
+                        <Github>
                             <NavIconImg src={GithubIcon} alt="footer-github-icon"/>
-                        </a>
-                    </NavIcon>
-                    <NavIcon>
-                        <a href="mailto:zolotinpavel@gmail.com">
+                        </Github>
+                    </Link>
+                    <Link to="mailto:zolotinpavel@gmail.com">
+                        <Mail>
                             <NavIconImg src={MailIcon} alt="footer-mail-icon"/>
-                        </a>
-                    </NavIcon>
-                    <NavIcon>
-                        <a href="https://t.me/pavelzolotin" target="_blank" rel="noreferrer">
+                        </Mail>
+                    </Link>
+                    <Link to="https://t.me/pavelzolotin">
+                        <Telegram>
                             <NavIconImg src={TelegramIcon} alt="footer-telegram-icon"/>
-                        </a>
-                    </NavIcon>
+                        </Telegram>
+                    </Link>
                 </Navigation>
                 <Text>
                     <TextDescription>Eat. Sleep. Code. Repeat</TextDescription>

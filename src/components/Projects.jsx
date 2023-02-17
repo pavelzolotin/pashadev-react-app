@@ -1,4 +1,5 @@
 import {useRef, useLayoutEffect} from 'react';
+import {Link} from 'react-router-dom';
 
 import gsap from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
@@ -228,13 +229,16 @@ const Projects = () => {
                                 <br/>Material UI
                             </Description>
                             <Buttons>
-                                <Button>
-                                    <a href="https://github.com/pavelzolotin/movie-react-app"
-                                       className="project__btn">Github</a>
-                                </Button>
-                                <Button>
-                                    <a href="https://cinematika.netlify.app" className="project__btn">Демо</a>
-                                </Button>
+                                <Link to="https://github.com/pavelzolotin/movie-react-app">
+                                    <Button>
+                                        <span>Github</span>
+                                    </Button>
+                                </Link>
+                                <Link to="https://cinematika.netlify.app">
+                                    <Button>
+                                        <span>Демо</span>
+                                    </Button>
+                                </Link>
                             </Buttons>
                         </Details>
                     </AnimationWrap>
@@ -267,13 +271,16 @@ const Projects = () => {
                                 <br/>Material UI
                             </Description>
                             <Buttons>
-                                <Button>
-                                    <a href="https://github.com/pavelzolotin/youtube-clone-react-app"
-                                       className="project__btn">Github</a>
-                                </Button>
-                                <Button>
-                                    <a href="/" className="project__btn">Демо</a>
-                                </Button>
+                                <Link to="https://github.com/pavelzolotin/youtube-clone-react-app">
+                                    <Button>
+                                        <span>Github</span>
+                                    </Button>
+                                </Link>
+                                <Link to="/">
+                                    <Button>
+                                        <span>Демо</span>
+                                    </Button>
+                                </Link>
                             </Buttons>
                         </Details>
                     </AnimationWrap>

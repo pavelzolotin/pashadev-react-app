@@ -100,7 +100,7 @@ const SocialIcons = styled.div`
   }
 `;
 
-const NavIcon = styled.button`
+const Github = styled.button`
   display: flex;
   align-items: center;
   width: 5rem;
@@ -113,24 +113,24 @@ const NavIcon = styled.button`
     height: 4rem;
     margin-right: 1.5rem;
   }
+`;
 
-  &:nth-child(2) {
-    margin: 0 3rem 0 0;
+const Mail = styled(Github)`
+  margin: 0 3rem 0 0;
 
-    @media (max-width: 767px) {
-      width: 4rem;
-      height: 4rem;
-      margin: 0 1.5rem 0 0;
-    }
+  @media (max-width: 767px) {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 1.5rem 0 0;
   }
+`;
 
-  &:nth-child(3) {
-    margin: 0;
+const Telegram = styled(Github)`
+  margin: 0;
 
-    @media (max-width: 767px) {
-      width: 4rem;
-      height: 4rem;
-    }
+  @media (max-width: 767px) {
+    width: 4rem;
+    height: 4rem;
   }
 `;
 
@@ -171,15 +171,21 @@ const Header = () => {
                         </Link>
                     </Language>
                     <SocialIcons>
-                        <NavIcon>
-                            <NavIconImg src={GithubIcon} alt="github-icon"/>
-                        </NavIcon>
-                        <NavIcon>
-                            <NavIconImg src={MailIcon} alt="mail-icon"/>
-                        </NavIcon>
-                        <NavIcon>
-                            <NavIconImg src={TelegramIcon} alt="telegram-icon"/>
-                        </NavIcon>
+                        <Link to="https://github.com/pavelzolotin">
+                            <Github>
+                                <NavIconImg src={GithubIcon} alt="header-github-icon"/>
+                            </Github>
+                        </Link>
+                        <Link to="mailto:zolotinpavel@gmail.com">
+                            <Mail>
+                                <NavIconImg src={MailIcon} alt="header-mail-icon"/>
+                            </Mail>
+                        </Link>
+                        <Link to="https://t.me/pavelzolotin">
+                            <Telegram>
+                                <NavIconImg src={TelegramIcon} alt="header-telegram-icon"/>
+                            </Telegram>
+                        </Link>
                     </SocialIcons>
                 </Navigation>
             </Box>

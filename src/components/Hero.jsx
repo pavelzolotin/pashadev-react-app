@@ -1,4 +1,5 @@
 import {useEffect, useRef} from 'react';
+import {Link} from 'react-router-dom';
 
 import styled from 'styled-components';
 
@@ -179,6 +180,7 @@ const CardTitle = styled.h3`
 const TextBox = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 50%;
   text-align: center;
   z-index: 0;
@@ -303,10 +305,12 @@ const ButtonIconRect = styled.rect`
 
 const ButtonText = styled.span`
   position: relative;
+  font-family: 'Play', sans-serif;
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: .3rem;
   text-transform: uppercase;
+  color: #fff;
 `;
 
 const HeroImage = styled.div`
@@ -387,14 +391,14 @@ const Hero = () => {
                     <TextTitle>Привет! <br/>Меня зовут <TitleSpan>Павел</TitleSpan></TextTitle>
                     <Description>Я web-разработчик, создаю интерфейсы для компаний по всему миру</Description>
                 </Text>
-                <Button>
-                    <a href="https://t.me/pavelzolotin">
+                <Link to="https://t.me/pavelzolotin">
+                    <Button>
                         <ButtonIcon>
                             <ButtonIconRect x="0" y="0" fill="none" width="100%" height="100%" className="rect"/>
                         </ButtonIcon>
                         <ButtonText>Связаться</ButtonText>
-                    </a>
-                </Button>
+                    </Button>
+                </Link>
             </TextBox>
             <HeroImage>
                 <Img src={HeroImg} alt="hero-image" ref={heroImage}/>
