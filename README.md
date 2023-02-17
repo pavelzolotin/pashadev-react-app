@@ -7,4 +7,5 @@ Stack:
 React\
 React Router v6\
 Styled-components\
-GSAP
+GSAP\
+react-i18next

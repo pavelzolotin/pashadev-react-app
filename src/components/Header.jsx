@@ -1,5 +1,7 @@
 import {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
+import {useTranslation} from 'react-i18next';
+
 import styled from 'styled-components';
 
 import Logo from '../img/logo.png';
@@ -70,8 +72,10 @@ const Language = styled.div`
   display: flex;
 `;
 
-const LanguageTitle = styled.span`
+const Button = styled.button`
+  font-family: 'Play',sans-serif;
   font-size: 2rem;
+  letter-spacing: .1rem;
   color: ${props => props.primary ? '#ffffff' : '#fd640d'};
   margin: 0 0.5rem 0 0.5rem;
 
@@ -141,6 +145,7 @@ const NavIconImg = styled.img`
 
 const Header = () => {
     const [sticky, setSticky] = useState(false);
+    const {i18n} = useTranslation();
 
     useEffect(() => {
         window.addEventListener('scroll', isSticky);
@@ -150,6 +155,10 @@ const Header = () => {
         const scrollTop = window.scrollY;
         const stickyClass = scrollTop >= 50 ? 'sticky' : '';
         setSticky(stickyClass);
+    };
+
+    const changeLanguage = (language) => {
+        i18n.changeLanguage(language);
     };
 
     return (
@@ -162,13 +171,14 @@ const Header = () => {
                 </LogoBox>
                 <Navigation>
                     <Language>
-                        <Link to="/">
-                            <LanguageTitle primary>RU</LanguageTitle>
-                        </Link>
+                        <Button primary
+                            onClick={() => changeLanguage('ru')}
+                        >RU
+                        </Button>
                         <Span>/</Span>
-                        <Link to="/">
-                            <LanguageTitle>EN</LanguageTitle>
-                        </Link>
+                        <Button onClick={() => changeLanguage('en')}
+                        >EN
+                        </Button>
                     </Language>
                     <SocialIcons>
                         <Link to="https://github.com/pavelzolotin">

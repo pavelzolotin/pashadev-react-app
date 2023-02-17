@@ -1,5 +1,6 @@
 import {useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom';
+import {useTranslation} from 'react-i18next';
 
 import styled from 'styled-components';
 
@@ -217,6 +218,7 @@ const TextTitle = styled.h1`
   font-size: 3.7rem;
   font-weight: 400;
   line-height: 1.4;
+  white-space: pre-line;
   color: #fff;
 
   @media (max-width: 767px) {
@@ -341,6 +343,8 @@ const Img = styled.img`
 `;
 
 const Hero = () => {
+    const {t} = useTranslation();
+
     const wrapper = useRef(null);
     const heroCards = useRef(null);
     const heroImage = useRef(null);
@@ -388,15 +392,15 @@ const Hero = () => {
             </Cards>
             <TextBox>
                 <Text>
-                    <TextTitle>Привет! <br/>Меня зовут <TitleSpan>Павел</TitleSpan></TextTitle>
-                    <Description>Я web-разработчик, создаю интерфейсы для компаний по всему миру</Description>
+                    <TextTitle>{t("hero-title")} <TitleSpan>{t("hero-span")}</TitleSpan></TextTitle>
+                    <Description>{t("hero-description")}</Description>
                 </Text>
                 <Link to="https://t.me/pavelzolotin">
                     <Button>
                         <ButtonIcon>
                             <ButtonIconRect x="0" y="0" fill="none" width="100%" height="100%" className="rect"/>
                         </ButtonIcon>
-                        <ButtonText>Связаться</ButtonText>
+                        <ButtonText>{t("hero-button")}</ButtonText>
                     </Button>
                 </Link>
             </TextBox>

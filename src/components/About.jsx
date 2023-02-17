@@ -1,3 +1,5 @@
+import {useTranslation} from 'react-i18next';
+
 import styled, {keyframes} from 'styled-components';
 
 import HTMLIcon from '../img/html-logo.png';
@@ -97,9 +99,10 @@ const Text = styled.div`
 
 const Description = styled.p`
   width: 75%;
-  font-size: 1.8rem;
   margin-top: 2rem;
+  font-size: 1.8rem;
   line-height: 1.7;
+  white-space: pre-line;
   color: #fff;
 
   @media (max-width: 767px) {
@@ -109,6 +112,7 @@ const Description = styled.p`
 `;
 
 const Span = styled.span`
+  display: block;
   color: #fd640d;
 `;
 
@@ -261,36 +265,19 @@ const CardTitle = styled.h3`
 `;
 
 const About = () => {
+    const {t} = useTranslation();
+
     return (
         <Container>
             <Title>
-                <H2>Обо мне</H2>
+                <H2>{t("about-title")}</H2>
             </Title>
             <Wrapper>
                 <Text>
                     <Description>
-                        Более 3-х лет я занимаюсь web-разработкой.
-                        <br/>Мне искренне нравится браться за новые задачи и разбираться в них.
-                        <br/>Я получаю огромное удовольствие от написания кода и наблюдения за результатами его
-                        реализации.
-                        <br/>Стараюсь постоянно двигаться вперёд и не останавливаться на полученных знаниях.
-                        <br/>
-                        <br/><Span>Стек технологий, который я использую:</Span>
-                        <br/>
-                        <br/>HTML5 / CSS3 / SCSS / Tailwind CSS /
-                        <br/>JavaScript / TypeScript / React JS / Redux /
-                        <br/>styled-components / Material UI /
-                        <br/>Node JS / Express JS / MongoDB / PostgreSQL
-                        <br/>
-                        <br/>- в своей работе применяю методологию БЭМ и принципы ООП
-                        <br/>- имею опыт работы с PHP и созданию кастомных тем на WordPress
-                        <br/>- активно использую систему контроля версиями Git
-                        <br/>- для более ускоренной вёрстки сайтов применяю Sass/SCSS
-                        <br/>- использую линтер ESLint
-                        <br/>- для сборки файлов проекта, пользуюсь Webpack
-                        <br/>- обладаю навыками кросс-браузерной и адаптивной вёрстки
-                        <br/>- также работаю с макетами из Figma
-                        <br/>- обожаю Pixel Perfect
+                        {t("about-description-part-one")}
+                        <Span>{t("about-description-span")}</Span>
+                        {t("about-description-part-two")}
                     </Description>
                 </Text>
                 <ImageWrapper>

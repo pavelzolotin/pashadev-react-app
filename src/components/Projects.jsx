@@ -1,5 +1,6 @@
 import {useRef, useLayoutEffect} from 'react';
 import {Link} from 'react-router-dom';
+import {useTranslation} from 'react-i18next';
 
 import gsap from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
@@ -174,6 +175,8 @@ const Button = styled.button`
 `;
 
 const Projects = () => {
+    const {t} = useTranslation();
+
     const main = useRef();
 
     useLayoutEffect(() => {
@@ -212,7 +215,7 @@ const Projects = () => {
     return (
         <Container ref={main}>
             <Title>
-                <H2>Примеры некоторых работ</H2>
+                <H2>{t("projects-title")}</H2>
             </Title>
             <Project className="project">
                 <Wrap className="project__wrap">
@@ -225,7 +228,7 @@ const Projects = () => {
                                 <ProjectH2>Cinematika</ProjectH2>
                             </ProjectTitle>
                             <Description>
-                                React-приложение с карточками фильмов, запрашиваемых с API.
+                                {t("project-one-description")}
                                 <br/>
                                 <br/>
                                 <Span>Стек:</Span>
@@ -243,7 +246,7 @@ const Projects = () => {
                                 </Link>
                                 <Link to="https://cinematika.netlify.app">
                                     <Button>
-                                        <span>Демо</span>
+                                        <span>{t("project-button")}</span>
                                     </Button>
                                 </Link>
                             </Buttons>
@@ -262,7 +265,7 @@ const Projects = () => {
                                 <ProjectH2>NewTube</ProjectH2>
                             </ProjectTitle>
                             <Description>
-                                Клон YouTube, созданный на MERN стеке.
+                                {t("project-two-description")}
                                 <br/>
                                 <br/>
                                 <Span>Стек:</Span>
@@ -285,7 +288,7 @@ const Projects = () => {
                                 </Link>
                                 <Link to="/">
                                     <Button>
-                                        <span>Демо</span>
+                                        <span>{t("project-button")}</span>
                                     </Button>
                                 </Link>
                             </Buttons>

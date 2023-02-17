@@ -1,0 +1,14 @@
+{
+  "hero-title": "Привет!\nМеня зовут",
+  "hero-span": "Павел",
+  "hero-description": "Я web-разработчик, создаю интерфейсы для компаний по всему миру",
+  "hero-button": "Связаться",
+  "about-title": "Обо мне",
+  "about-description-part-one": "Более 3-х лет я занимаюсь web-разработкой.\nМне искренне нравится браться за новые задачи и разбираться в них.\nЯ получаю огромное удовольствие от написания кода и наблюдения за результатами его реализации.\nСтараюсь постоянно двигаться вперёд и не останавливаться на полученных знаниях.",
+  "about-description-span": "\nСтек технологий, который я использую:",
+  "about-description-part-two": "\nHTML5 / CSS3 / SCSS / Tailwind CSS /\nJavaScript / TypeScript / React JS / Redux /\nstyled-components / Material UI /\nNode JS / Express JS / MongoDB / PostgreSQL\n\n- в своей работе применяю методологию БЭМ и принципы ООП\n- имею опыт работы с PHP и созданию кастомных тем на WordPress\n- активно использую систему контроля версиями Git\n- для более ускоренной вёрстки сайтов применяю Sass/SCSS\n- использую линтер ESLint\n- для сборки файлов проекта, пользуюсь Webpack\n- обладаю навыками кросс-браузерной и адаптивной вёрстки\n- также работаю с макетами из Figma\n- обожаю Pixel Perfect",
+  "projects-title": "Примеры некоторых работ",
+  "project-one-description": "React-приложение с карточками фильмов, запрашиваемых с API.",
+  "project-two-description": "Клон YouTube, созданный на MERN стеке.",
+  "project-button": "Демо"
+}

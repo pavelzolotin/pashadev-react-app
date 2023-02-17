@@ -1,4 +1,5 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+
 import styled, {createGlobalStyle} from 'styled-components';
 import GlobalFonts from './fonts/fonts';
 
@@ -33,7 +34,7 @@ const GlobalStyle = createGlobalStyle`
     opacity: 0;
     transform: scale(0);
   }
-  
+
   button {
     background-color: transparent;
     outline: none;
@@ -59,7 +60,7 @@ const GlobalStyle = createGlobalStyle`
   ::-webkit-scrollbar-thumb {
     background: #3a6073;
   }
-  
+
   .sticky {
     background-color: #16222a;
     transition: background-color .5s;
@@ -70,7 +71,7 @@ const GlobalStyle = createGlobalStyle`
     height: 6rem;
     transition: width .3s, height .3s;
   }
-  
+
   .dot-color {
     background-color: rgba(253, 100, 13, 0.5);
     transition: background-color .5s;
@@ -89,7 +90,7 @@ function App() {
                 <Header/>
                 <Routes>
                     <Route path="/" element={
-                       <Home/>
+                        <Home/>
                     }/>
                     <Route path="*" element={
                         <PageNotFound/>
