@@ -185,18 +185,25 @@ const Projects = () => {
                 let animationWrap = wrap.querySelector('.project__animation-wrap');
                 let getToValue = () => -(animationWrap.scrollWidth - window.innerWidth);
 
-                gsap.fromTo(animationWrap, {
-                    x: () => animationWrap ? 0 : getToValue()
-                }, {
-                    x: () => animationWrap ? getToValue() : 0,
-                    scrollTrigger: {
-                        trigger: proj,
-                        start: 'top top',
-                        end: () => "+=" + (animationWrap.scrollWidth - window.innerWidth),
-                        pin: wrap,
-                        scrub: true,
+                gsap.fromTo(
+                    animationWrap,
+                    {
+                        x: () => (animationWrap ? 0 : getToValue()),
+                        immediateRender: false,
                     },
-                });
+                    {
+                        x: () => (animationWrap ? getToValue() : 0),
+                        ease: '.3s',
+                        scrollTrigger: {
+                            trigger: proj,
+                            start: 'top top',
+                            end: () => '+=' + (animationWrap.scrollWidth - window.innerWidth),
+                            pin: wrap,
+                            invalidateOnRefresh: true,
+                            scrub: true,
+                        },
+                    }
+                );
             });
         }, main);
         return () => ctx.revert();
