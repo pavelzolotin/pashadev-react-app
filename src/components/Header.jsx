@@ -73,11 +73,13 @@ const Language = styled.div`
 `;
 
 const Button = styled.button`
-  font-family: 'Play',sans-serif;
+  font-family: 'Play', sans-serif;
   font-size: 2rem;
+  color: #ffffff;
   letter-spacing: .1rem;
-  color: ${props => props.primary ? '#ffffff' : '#fd640d'};
   margin: 0 0.5rem 0 0.5rem;
+
+  ${({active}) => active && `color: #fd640d;`};
 
   @media (max-width: 767px) {
     font-size: 1.8rem;
@@ -143,9 +145,24 @@ const NavIconImg = styled.img`
   height: 100%;
 `;
 
+const languages = [
+    {
+        id: 1,
+        type: 'RU',
+        language: 'RU'
+    },
+    {
+        id: 2,
+        type: 'EN',
+        language: 'EN'
+    }
+];
+
 const Header = () => {
-    const [sticky, setSticky] = useState(false);
     const {i18n} = useTranslation();
+
+    const [sticky, setSticky] = useState(false);
+    const [langActive, setLangActive] = useState(languages[0].type);
 
     useEffect(() => {
         window.addEventListener('scroll', isSticky);
@@ -157,7 +174,8 @@ const Header = () => {
         setSticky(stickyClass);
     };
 
-    const changeLanguage = (language) => {
+    const setActiveLanguage = (type, language) => {
+        setLangActive(type);
         i18n.changeLanguage(language);
     };
 
@@ -171,14 +189,23 @@ const Header = () => {
                 </LogoBox>
                 <Navigation>
                     <Language>
-                        <Button primary
-                            onClick={() => changeLanguage('ru')}
-                        >RU
-                        </Button>
-                        <Span>/</Span>
-                        <Button onClick={() => changeLanguage('en')}
-                        >EN
-                        </Button>
+                        {
+                            languages
+                                .map((item, i) => (
+                                    <div key={item.id}>
+                                        {
+                                            i > 0 && <Span key={item}>/</Span>
+                                        }
+                                        <Button
+                                            key={item.id}
+                                            active={langActive === item.type}
+                                            onClick={() => setActiveLanguage(item.type, item.language)}
+                                        >
+                                            {item.type}
+                                        </Button>
+                                    </div>
+                                ))
+                        }
                     </Language>
                     <SocialIcons>
                         <Link to="https://github.com/pavelzolotin">
