@@ -23,16 +23,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    box-sizing: border-box;
     overflow-x: hidden;
     font-family: 'Play', sans-serif;
     background: linear-gradient(to right, #16222a, #3a6073);
     cursor: none;
-  }
-
-  body:not(body:hover) .cursor::after {
-    opacity: 0;
-    transform: scale(0);
   }
 
   button {
