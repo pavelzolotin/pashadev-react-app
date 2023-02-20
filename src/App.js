@@ -26,7 +26,6 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     font-family: 'Play', sans-serif;
     background: linear-gradient(to right, #16222a, #3a6073);
-    cursor: none;
   }
 
   button {
