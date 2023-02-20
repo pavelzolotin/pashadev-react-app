@@ -77,6 +77,7 @@ const Button = styled.button`
   font-size: 2rem;
   color: #ffffff;
   letter-spacing: .1rem;
+  text-transform: uppercase;
   margin: 0 0.5rem 0 0.5rem;
 
   ${({active}) => active && `color: #fd640d;`};
@@ -148,13 +149,13 @@ const NavIconImg = styled.img`
 const languages = [
     {
         id: 1,
-        type: 'RU',
-        language: 'RU'
+        type: 'ru',
+        language: 'ru'
     },
     {
         id: 2,
-        type: 'EN',
-        language: 'EN'
+        type: 'en',
+        language: 'en'
     }
 ];
 
