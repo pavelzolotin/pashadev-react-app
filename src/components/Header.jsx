@@ -163,11 +163,12 @@ const Header = () => {
     const {i18n} = useTranslation();
 
     const [sticky, setSticky] = useState(false);
-    const [langActive, setLangActive] = useState(languages[0].type);
+    const [languageActive, setLanguageActive] = useState(localStorage.getItem('language') || languages[0].type);
 
     useEffect(() => {
         window.addEventListener('scroll', isSticky);
-    });
+        localStorage.setItem('language', languageActive);
+    }, [languageActive]);
 
     const isSticky = () => {
         const scrollTop = window.scrollY;
@@ -176,7 +177,7 @@ const Header = () => {
     };
 
     const setActiveLanguage = (type, language) => {
-        setLangActive(type);
+        setLanguageActive(type);
         i18n.changeLanguage(language);
     };
 
@@ -199,7 +200,7 @@ const Header = () => {
                                         }
                                         <Button
                                             key={item.id}
-                                            active={langActive === item.type}
+                                            active={languageActive === item.type}
                                             onClick={() => setActiveLanguage(item.type, item.language)}
                                         >
                                             {item.type}
