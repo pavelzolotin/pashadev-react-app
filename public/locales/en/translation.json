@@ -10,5 +10,7 @@
   "projects-title": "Examples of some work",
   "project-one-description": "Movie App project with cards about movies received from API.",
   "project-two-description": "YouTube Clone Application built with MERN Stack.",
+  "project-three-description": "App about VR devices built with Next.js.",
+  "project-stack": "Stack",
   "project-button": "Demo"
 }

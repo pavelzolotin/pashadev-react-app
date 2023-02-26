@@ -10,5 +10,7 @@
   "projects-title": "Примеры некоторых работ",
   "project-one-description": "React-приложение с карточками фильмов, запрашиваемых с API.",
   "project-two-description": "Клон YouTube, созданный на MERN стеке.",
+  "project-three-description": "Приложение о VR-девайсах построенное на Next.js",
+  "project-stack": "Стек",
   "project-button": "Демо"
 }
