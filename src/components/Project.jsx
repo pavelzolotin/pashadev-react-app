@@ -141,7 +141,7 @@ const Button = styled.button`
   }
 `;
 
-const Project = ({image, title, description, stack, link_first, link_second}) => {
+const Project = ({image, title, description, stack, link_first, link_second, alt}) => {
     const {t} = useTranslation();
 
     return (
@@ -149,7 +149,7 @@ const Project = ({image, title, description, stack, link_first, link_second}) =>
             <Wrap className="project__wrap">
                 <AnimationWrap className="project__animation-wrap">
                     <Image>
-                        <Img src={image} alt=""/>
+                        <Img src={image} alt={alt}/>
                     </Image>
                     <Details>
                         <ProjectTitle>

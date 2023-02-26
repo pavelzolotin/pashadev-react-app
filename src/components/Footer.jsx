@@ -1,16 +1,11 @@
 import {useEffect, useRef} from 'react';
+import {Link} from 'react-router-dom';
+
 import styled from 'styled-components';
 
 import Logo from '../img/logo.png';
-import GithubIcon from '../img/github-icon.png';
-import MailIcon from '../img/email-icon.png';
-import TelegramIcon from '../img/telegram-icon.png';
-import CurlyBracketsIcon from '../img/footer-curly-brackets.png';
-import SourceCodeIcon from '../img/footer-source-code.png';
-import ReactIcon from '../img/footer-react.png';
-import JSIcon from '../img/footer-js.png';
-import SquareBracketsIcon from '../img/footer-square-brackets.png';
-import {Link} from "react-router-dom";
+import {footerCards} from '../constants/data';
+import {footerNav} from '../constants/data';
 
 const Container = styled.div`
   display: flex;
@@ -169,7 +164,7 @@ const Navigation = styled.div`
   }
 `;
 
-const Github = styled.button`
+const NavIcon = styled.button`
   display: flex;
   align-items: center;
   width: 5rem;
@@ -178,18 +173,6 @@ const Github = styled.button`
 
   @media (max-width: 767px) {
     margin: 3rem 0 0 0;
-  }
-`;
-
-const Mail = styled(Github)`
-  @media (max-width: 767px) {
-    margin: 3rem 0 0 0;
-  }
-`;
-
-const Telegram = styled(Github)`
-  @media (max-width: 767px) {
-    margin-top: 3rem;
   }
 `;
 
@@ -227,7 +210,7 @@ const CopyDescription = styled.p`
 `;
 
 const Footer = () => {
-    const footerCards = useRef(null);
+    const footerItems = useRef(null);
 
     const footerAnimationWidth = window.innerWidth / 7;
     const footerAnimationHeight = window.innerHeight / 20;
@@ -237,7 +220,7 @@ const Footer = () => {
     });
 
     const cardsAnimation = () => {
-        const cards = footerCards.current;
+        const cards = footerItems.current;
 
         cards.addEventListener('mousemove', (e) => {
             const mouseX = e.clientX / footerAnimationWidth;
@@ -248,55 +231,16 @@ const Footer = () => {
 
     return (
         <Container>
-            <Cards ref={footerCards}>
-                <Card>
-                    <CardImg src={CurlyBracketsIcon} alt=""/>
-                </Card>
-                <Card>
-                    <CardImg src={SourceCodeIcon} alt=""/>
-                </Card>
-                <Card>
-                    <CardImg src={ReactIcon} alt=""/>
-                </Card>
-                <Card>
-                    <CardImg src={JSIcon} alt=""/>
-                </Card>
-                <Card>
-                    <CardImg src={SquareBracketsIcon} alt=""/>
-                </Card>
-                <Card>
-                    <CardImg src={CurlyBracketsIcon} alt=""/>
-                </Card>
-                <Card>
-                    <CardImg src={SourceCodeIcon} alt=""/>
-                </Card>
-                <Card>
-                    <CardImg src={ReactIcon} alt=""/>
-                </Card>
-                <Card>
-                    <CardImg src={JSIcon} alt=""/>
-                </Card>
-                <Card>
-                    <CardImg src={SquareBracketsIcon} alt=""/>
-                </Card>
-                <Card>
-                    <CardImg src={CurlyBracketsIcon} alt=""/>
-                </Card>
-                <Card>
-                    <CardImg src={SourceCodeIcon} alt=""/>
-                </Card>
-                <Card>
-                    <CardImg src={ReactIcon} alt=""/>
-                </Card>
-                <Card>
-                    <CardImg src={JSIcon} alt=""/>
-                </Card>
-                <Card>
-                    <CardImg src={SquareBracketsIcon} alt=""/>
-                </Card>
-                <Card>
-                    <CardImg src={CurlyBracketsIcon} alt=""/>
-                </Card>
+            <Cards ref={footerItems}>
+                {
+                    footerCards.map(card => (
+                        <Card
+                            key={card.id}
+                        >
+                            <CardImg src={card.image} alt=""/>
+                        </Card>
+                    ))
+                }
             </Cards>
             <Wrapper>
                 <LogoBox>
@@ -305,27 +249,26 @@ const Footer = () => {
                     </a>
                 </LogoBox>
                 <Navigation>
-                    <Link to="https://github.com/pavelzolotin">
-                        <Github>
-                            <NavIconImg src={GithubIcon} alt="footer-github-icon"/>
-                        </Github>
-                    </Link>
-                    <Link to="mailto:zolotinpavel@gmail.com">
-                        <Mail>
-                            <NavIconImg src={MailIcon} alt="footer-mail-icon"/>
-                        </Mail>
-                    </Link>
-                    <Link to="https://t.me/pavelzolotin">
-                        <Telegram>
-                            <NavIconImg src={TelegramIcon} alt="footer-telegram-icon"/>
-                        </Telegram>
-                    </Link>
+                    {
+                        footerNav.map(icon => (
+                            <Link to={icon.link} key={icon.id}>
+                                <NavIcon
+                                    key={icon.id}
+                                >
+                                    <NavIconImg
+                                        src={icon.image}
+                                        alt={icon.alt}
+                                    />
+                                </NavIcon>
+                            </Link>
+                        ))
+                    }
                 </Navigation>
                 <Text>
                     <TextDescription>Eat. Sleep. Code. Repeat</TextDescription>
                 </Text>
                 <Copyright>
-                    <CopyDescription>&copy; 2019 - 2023 PASHADEV</CopyDescription>
+                    <CopyDescription>© 2019 - 2023 PASHADEV</CopyDescription>
                 </Copyright>
             </Wrapper>
         </Container>

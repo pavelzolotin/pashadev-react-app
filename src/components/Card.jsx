@@ -143,7 +143,7 @@ const CardTitle = styled.h3`
   }
 `;
 
-const Card = ({title, image}) => {
+const Card = ({title, image, alt}) => {
     return (
         <Box className="about__card">
             <CardBorder className="about__card__border">
@@ -165,7 +165,7 @@ const Card = ({title, image}) => {
                 </Icon>
             </CardBorder>
             <Image className="about__card__image">
-                <Img src={image} alt="" className="about__card__img"/>
+                <Img src={image} alt={alt} className="about__card__img"/>
             </Image>
             <CardText>
                 <CardTitle className="about__card__title">{title}</CardTitle>

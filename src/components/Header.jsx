@@ -5,9 +5,7 @@ import {useTranslation} from 'react-i18next';
 import styled from 'styled-components';
 
 import Logo from '../img/logo.png';
-import GithubIcon from '../img/github-icon.png';
-import MailIcon from '../img/email-icon.png';
-import TelegramIcon from '../img/telegram-icon.png';
+import {footerNav} from '../constants/data';
 
 const Container = styled.div`
   display: flex;
@@ -68,6 +66,21 @@ const Navigation = styled.div`
   }
 `;
 
+const NavIcon = styled.button`
+  display: flex;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  margin: 0 0 0 3rem;
+  cursor: pointer;
+
+  @media (max-width: 767px) {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 0 0 1.5rem;
+  }
+`;
+
 const Language = styled.div`
   display: flex;
 `;
@@ -104,40 +117,6 @@ const SocialIcons = styled.div`
     position: absolute;
     right: 2rem;
     top: -2.3rem;
-  }
-`;
-
-const Github = styled.button`
-  display: flex;
-  align-items: center;
-  width: 5rem;
-  height: 5rem;
-  margin: 0 3rem 0 3rem;
-  cursor: pointer;
-
-  @media (max-width: 767px) {
-    width: 4rem;
-    height: 4rem;
-    margin-right: 1.5rem;
-  }
-`;
-
-const Mail = styled(Github)`
-  margin: 0 3rem 0 0;
-
-  @media (max-width: 767px) {
-    width: 4rem;
-    height: 4rem;
-    margin: 0 1.5rem 0 0;
-  }
-`;
-
-const Telegram = styled(Github)`
-  margin: 0;
-
-  @media (max-width: 767px) {
-    width: 4rem;
-    height: 4rem;
   }
 `;
 
@@ -210,21 +189,20 @@ const Header = () => {
                         }
                     </Language>
                     <SocialIcons>
-                        <Link to="https://github.com/pavelzolotin">
-                            <Github>
-                                <NavIconImg src={GithubIcon} alt="header-github-icon"/>
-                            </Github>
-                        </Link>
-                        <Link to="mailto:zolotinpavel@gmail.com">
-                            <Mail>
-                                <NavIconImg src={MailIcon} alt="header-mail-icon"/>
-                            </Mail>
-                        </Link>
-                        <Link to="https://t.me/pavelzolotin">
-                            <Telegram>
-                                <NavIconImg src={TelegramIcon} alt="header-telegram-icon"/>
-                            </Telegram>
-                        </Link>
+                        {
+                            footerNav.map(icon => (
+                                <Link to={icon.link} key={icon.id}>
+                                    <NavIcon
+                                        key={icon.id}
+                                    >
+                                        <NavIconImg
+                                            src={icon.image}
+                                            alt={icon.alt}
+                                        />
+                                    </NavIcon>
+                                </Link>
+                            ))
+                        }
                     </SocialIcons>
                 </Navigation>
             </Box>
