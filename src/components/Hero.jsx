@@ -4,6 +4,7 @@ import {useTranslation} from 'react-i18next';
 
 import styled from 'styled-components';
 
+import {heroCards} from '../constants/data';
 import HeroImg from '../img/hero-img.png';
 
 const Container = styled.div`
@@ -346,7 +347,7 @@ const Hero = () => {
     const {t} = useTranslation();
 
     const wrapper = useRef(null);
-    const heroCards = useRef(null);
+    const cardItems = useRef(null);
     const heroImage = useRef(null);
 
     useEffect(() => {
@@ -355,7 +356,7 @@ const Hero = () => {
 
     const cardsAnimation = () => {
         const wrap = wrapper.current;
-        const cards = heroCards.current;
+        const cards = cardItems.current;
         const image = heroImage.current;
 
         wrap.addEventListener('mousemove', (e) => {
@@ -373,22 +374,16 @@ const Hero = () => {
 
     return (
         <Container ref={wrapper}>
-            <Cards ref={heroCards}>
-                <CardItem>
-                    <CardTitle>JavaScript</CardTitle>
-                </CardItem>
-                <CardItem>
-                    <CardTitle>React JS</CardTitle>
-                </CardItem>
-                <CardItem>
-                    <CardTitle>Node JS</CardTitle>
-                </CardItem>
-                <CardItem>
-                    <CardTitle>SCSS</CardTitle>
-                </CardItem>
-                <CardItem>
-                    <CardTitle>TypeScript</CardTitle>
-                </CardItem>
+            <Cards ref={cardItems}>
+                {
+                    heroCards.map(card => (
+                        <CardItem
+                            key={card.id}
+                        >
+                            <CardTitle>{card.title}</CardTitle>
+                        </CardItem>
+                    ))
+                }
             </Cards>
             <TextBox>
                 <Text>

@@ -2,7 +2,7 @@ import {useTranslation} from 'react-i18next';
 
 import styled from 'styled-components';
 
-import {cards} from '../constants/data';
+import {aboutCards} from '../constants/data';
 import Card from './Card';
 
 const Container = styled.div`
@@ -133,7 +133,7 @@ const About = () => {
                 <ImageWrapper>
                     <Box>
                         {
-                            cards.map(card => (
+                            aboutCards.map(card => (
                                 <Card
                                     key={card.id}
                                     {...card}
