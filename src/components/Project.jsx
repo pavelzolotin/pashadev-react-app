@@ -29,13 +29,7 @@ const Wrap = styled.div`
   height: 100vh;
 `;
 
-const AnimationWrap = styled.div`
-  display: flex;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-  height: 100vh;
-`;
+const AnimationWrap = styled(Wrap)``;
 
 const Image = styled.div`
   position: relative;
