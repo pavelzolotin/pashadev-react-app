@@ -64,7 +64,6 @@ const Projects = () => {
                             start: 'top top',
                             end: () => '+=' + (animationWrap.scrollWidth - window.innerWidth),
                             pin: wrap,
-                            invalidateOnRefresh: true,
                             scrub: true,
                         },
                     }
