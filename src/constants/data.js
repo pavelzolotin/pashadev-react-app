@@ -1,5 +1,3 @@
-import i18next from 'i18next';
-
 export const heroCards = [
     {
         id: 1,
@@ -85,7 +83,7 @@ export const projects = [
         id: 1,
         image: require('../img/cinematika-screen-one-large.png'),
         title: 'Cinematika',
-        description: i18next.t("project-one-description"),
+        description: 'project-one-description',
         stack: `React
                 React Router v6
                 Axios
@@ -99,7 +97,7 @@ export const projects = [
         id: 2,
         image: require('../img/newtube-screen-dark-one-large.png'),
         title: 'NewTube',
-        description: i18next.t("project-two-description"),
+        description: 'project-two-description',
         stack: `React
                 React Router v6
                 React Redux-toolkit
@@ -118,7 +116,7 @@ export const projects = [
         id: 3,
         image: require('../img/metaverse-screen-large.png'),
         title: 'Metaverse',
-        description: i18next.t("project-three-description"),
+        description: 'project-three-description',
         stack: `React
                 Next.js
                 Tailwind CSS

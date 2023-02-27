@@ -14,6 +14,10 @@ const Container = styled.div`
   width: 100%;
   height: 100vh;
   margin: 10rem auto 0 auto;
+
+  @media (max-width: 767px) {
+    margin: 5rem auto 0 auto;
+  }
 `;
 
 const Cards = styled.div`

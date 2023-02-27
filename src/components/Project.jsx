@@ -7,16 +7,16 @@ const Box = styled.div`
   overflow-x: hidden;
 
   &:nth-child(2) {
-  @include phone {
-    margin-top: 7rem;
-  }
+    @media (max-width: 767px) {
+      margin-top: 7rem;
+    }
   }
 
   &:last-child {
     margin-top: 5rem;
 
     @media (max-width: 767px) {
-      margin-top: 12rem;
+      margin-top: 0;
     }
   }
 `;
@@ -40,8 +40,12 @@ const AnimationWrap = styled.div`
 const Image = styled.div`
   position: relative;
   width: 1000px;
-  margin-left: 8rem;
+  margin-left: 20rem;
   z-index: 1;
+
+  @media (max-width: 767px) {
+    margin-left: 10rem;
+  }
 `;
 
 const Img = styled.img`
