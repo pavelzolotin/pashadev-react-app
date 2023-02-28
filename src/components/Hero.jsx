@@ -16,6 +16,10 @@ const Container = styled.div`
   height: 100vh;
   margin: auto;
 
+  @media (min-width: 1250px) and (max-width: 1440px) {
+    max-width: 125rem;
+  }
+  
   @media (max-width: 767px) {
     flex-direction: column-reverse;
     justify-content: flex-end;
@@ -43,18 +47,9 @@ const CardItem = styled.div`
   transition: transform .3s;
   overflow: hidden;
 
-  @media (max-width: 767px) {
-    width: 13.5rem;
-    height: 8rem;
-  }
-
   &:hover:before {
     transform: translateY(-3rem);
     transition: transform .3s;
-
-    @media (max-width: 767px) {
-      transform: translateY(-1.5rem);
-    }
   }
 
   &:before {
@@ -67,42 +62,36 @@ const CardItem = styled.div`
   }
 
   &:nth-child(1) {
-    top: 13%;
-    left: -7%;
+    top: 17%;
+    left: -6%;
     background: #f0d91d;
-
-    @media (max-width: 767px) {
-      top: 8%;
-      right: 3%;
-      left: inherit;
-    }
 
     &:before {
       content: 'JS';
       right: 0;
       bottom: -2.5rem;
     }
+
+    @media (min-width: 1250px) and (max-width: 1440px) {
+      top: 8%;
+      left: 0;
+    }
   }
 
   &:nth-child(2) {
-    top: -2%;
+    top: 4%;
     left: 26%;
     background: #61dbfb;
-
-    @media (max-width: 767px) {
-      top: 18%;
-      right: 3%;
-      left: inherit;
-    }
 
     &:before {
       content: 'React';
       right: -5rem;
       bottom: -2.5rem;
+    }
 
-      @media (max-width: 767px) {
-        right: -8rem;
-      }
+    @media (min-width: 1250px) and (max-width: 1440px) {
+      top: -4%;
+      left: 34%;
     }
   }
 
@@ -111,20 +100,14 @@ const CardItem = styled.div`
     left: 48%;
     background: #87bf00;
 
-    @media (max-width: 767px) {
-      top: 28%;
-      right: 3%;
-      left: inherit;
-    }
-
     &:before {
       content: 'Node';
       right: -1rem;
       bottom: -2.5rem;
+    }
 
-      @media (max-width: 767px) {
-        right: -6rem;
-      }
+    @media (min-width: 1250px) and (max-width: 1440px) {
+      left: 50%;
     }
   }
 
@@ -133,38 +116,27 @@ const CardItem = styled.div`
     left: 44%;
     background: #ca6092;
 
-    @media (max-width: 767px) {
-      top: 38%;
-      right: 3%;
-      left: inherit;
-    }
-
     &:before {
       content: 'SCSS';
       right: -1rem;
       bottom: -2.5rem;
-
-      @media (max-width: 767px) {
-        right: -4rem;
-      }
     }
   }
 
   &:nth-child(5) {
-    top: 55%;
+    top: 57%;
     left: -10%;
     background: #2d79c7;
-
-    @media (max-width: 767px) {
-      top: 48%;
-      left: inherit;
-      right: 3%;
-    }
-
+    
     &:before {
       content: 'TS';
       right: 0;
       bottom: -2.5rem;
+    }
+
+    @media (min-width: 1250px) and (max-width: 1440px) {
+      top: 60%;
+      left: -3%;
     }
   }
 `;
@@ -173,10 +145,6 @@ const CardTitle = styled.h3`
   margin: 1rem 0 0 1rem;
   font-size: 2rem;
   color: #fff;
-
-  @media (max-width: 767px) {
-    margin: 1rem 0 0 .7rem;
-  }
 `;
 
 const TextBox = styled.div`
@@ -324,6 +292,11 @@ const HeroImage = styled.div`
   width: 48rem;
   height: 48rem;
 
+  @media (min-width: 1250px) and (max-width: 1440px) {
+    width: 38rem;
+    height: 38rem;
+  }
+  
   @media (max-width: 767px) {
     align-items: start;
     justify-content: center;
