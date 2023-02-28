@@ -8,7 +8,7 @@ const Box = styled.div`
 
   &:nth-child(2) {
     @media (max-width: 767px) {
-      margin-top: 7rem;
+      margin-top: 2rem;
     }
   }
 
@@ -51,11 +51,7 @@ const Img = styled.img`
 const Details = styled.div`
   display: flex;
   align-items: center;
-  margin-left: 7rem;
-
-  @media (max-width: 767px) {
-    padding: 0 2rem;
-  }
+  margin-left: 12rem;
 `;
 
 const ProjectTitle = styled.div``;
@@ -80,7 +76,8 @@ const Description = styled.p`
   white-space: pre-line;
 
   @media (max-width: 767px) {
-    padding: 0;
+    width: 420px;
+    margin: 0 4rem 0 12rem;
   }
 `;
 
