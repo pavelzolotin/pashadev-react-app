@@ -1,5 +1,6 @@
 {
-  "hero-title": "Привет!\nМеня зовут",
+  "hero-title-one": "Привет!",
+  "hero-title-two": "\nМеня зовут",
   "hero-span": "Павел",
   "hero-description": "Я web-разработчик, создаю пользовательские интерфейсы",
   "hero-button": "Связаться",
@@ -8,9 +9,9 @@
   "about-description-span": "\nСтек технологий, который я использую:",
   "about-description-part-two": "\nHTML5 / CSS3 / SCSS / Tailwind CSS /\nJavaScript / TypeScript / React JS / Redux /\nstyled-components / Material UI /\nNode JS / Express JS / MongoDB / PostgreSQL\n\n- в своей работе применяю методологию БЭМ и принципы ООП\n- имею опыт работы с PHP и созданию кастомных тем на WordPress\n- активно использую систему контроля версиями Git\n- для более ускоренной вёрстки сайтов применяю Sass/SCSS\n- использую линтер ESLint\n- для сборки файлов проекта, пользуюсь Webpack\n- обладаю навыками кросс-браузерной и адаптивной вёрстки\n- также работаю с макетами из Figma\n- обожаю Pixel Perfect",
   "projects-title": "Примеры некоторых работ",
-  "project-one-description": "React-приложение с карточками фильмов, запрашиваемых с API.",
-  "project-two-description": "Клон YouTube, созданный на MERN стеке.",
-  "project-three-description": "Приложение о VR-девайсах построенное на Next.js",
+  "project-description-one": "React-приложение с карточками фильмов, запрашиваемых с API.",
+  "project-description-two": "Клон YouTube, созданный на MERN стеке.",
+  "project-description-three": "Приложение о VR-девайсах построенное на Next.js",
   "project-stack": "Стек",
   "project-button": "Демо"
 }

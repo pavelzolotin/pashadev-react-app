@@ -19,7 +19,7 @@ const Container = styled.div`
   @media (min-width: 1250px) and (max-width: 1440px) {
     max-width: 125rem;
   }
-  
+
   @media (max-width: 767px) {
     flex-direction: column-reverse;
     justify-content: flex-end;
@@ -62,8 +62,8 @@ const CardItem = styled.div`
   }
 
   &:nth-child(1) {
-    top: 17%;
-    left: -6%;
+    top: 14%;
+    left: -9%;
     background: #f0d91d;
 
     &:before {
@@ -73,14 +73,14 @@ const CardItem = styled.div`
     }
 
     @media (min-width: 1250px) and (max-width: 1440px) {
-      top: 8%;
-      left: 0;
+      top: 7%;
+      left: 2%;
     }
   }
 
   &:nth-child(2) {
     top: 4%;
-    left: 26%;
+    left: 32%;
     background: #61dbfb;
 
     &:before {
@@ -97,7 +97,7 @@ const CardItem = styled.div`
 
   &:nth-child(3) {
     top: 30%;
-    left: 48%;
+    left: 53%;
     background: #87bf00;
 
     &:before {
@@ -107,13 +107,13 @@ const CardItem = styled.div`
     }
 
     @media (min-width: 1250px) and (max-width: 1440px) {
-      left: 50%;
+      left: 55%;
     }
   }
 
   &:nth-child(4) {
-    top: 70%;
-    left: 44%;
+    bottom: 22%;
+    left: 48%;
     background: #ca6092;
 
     &:before {
@@ -124,10 +124,10 @@ const CardItem = styled.div`
   }
 
   &:nth-child(5) {
-    top: 57%;
-    left: -10%;
+    bottom: 12%;
+    left: -4%;
     background: #2d79c7;
-    
+
     &:before {
       content: 'TS';
       right: 0;
@@ -135,7 +135,7 @@ const CardItem = styled.div`
     }
 
     @media (min-width: 1250px) and (max-width: 1440px) {
-      top: 60%;
+      bottom: 15%;
       left: -3%;
     }
   }
@@ -153,7 +153,6 @@ const TextBox = styled.div`
   align-items: center;
   width: 50%;
   text-align: center;
-  z-index: 0;
 
   @media (max-width: 767px) {
     width: 100%;
@@ -162,14 +161,16 @@ const TextBox = styled.div`
 `;
 
 const Text = styled.div`
-  width: 72%;
+  position: relative;
+  width: 100%;
   margin: 0 auto 2rem auto;
-  padding: 3rem;
+  padding: 10rem;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 0.5rem 6rem 6rem 0.5rem;
   transition: background-color .3s;
 
   @media (max-width: 767px) {
+    position: inherit;
     width: 100%;
     margin: 0;
     padding: 3rem 0 3rem 0;
@@ -181,17 +182,32 @@ const Text = styled.div`
   }
 `;
 
-const TextTitle = styled.h1`
-  width: 60%;
+const TextTitleOne = styled.h1`
   margin: auto;
-  font-size: 3.7rem;
-  font-weight: 400;
-  line-height: 1.4;
-  white-space: pre-line;
-  color: #fff;
+  font-size: 8rem;
+  position: absolute;
+  transform-origin: top left;
+  left: 0;
+  top: 50%;
+  transform: rotate(-90deg) translateX(-50%);
+  opacity: .1;
+  z-index: -1;
 
   @media (max-width: 767px) {
-    font-size: 2.7rem;
+    transform: none;
+    top: 2rem;
+    left: 0;
+    right: 0;
+    opacity: .03;
+  }
+`;
+
+const TextTitleTwo = styled.h1`
+  width: 100%;
+  font-size: 5.2rem;
+
+  @media (max-width: 767px) {
+    font-size: 3.7rem;
   }
 `;
 
@@ -296,7 +312,7 @@ const HeroImage = styled.div`
     width: 38rem;
     height: 38rem;
   }
-  
+
   @media (max-width: 767px) {
     align-items: start;
     justify-content: center;
@@ -307,7 +323,7 @@ const HeroImage = styled.div`
 
 const Img = styled.img`
   position: absolute;
-  width: 100%;
+  width: 80%;
   object-fit: contain;
 
   @media (max-width: 767px) {
@@ -335,7 +351,7 @@ const Hero = () => {
         wrap.addEventListener('mousemove', (e) => {
             const cardMoveX = e.clientX / (window.innerWidth / 5);
             const cardMoveY = e.clientY / (window.innerHeight / 8);
-            const imageMoveX = e.clientY / (window.innerWidth / 10);
+            const imageMoveX = e.clientX / (window.innerWidth / 10);
             const imageMoveY = e.clientY / (window.innerHeight / 15);
 
             cards.style.transform = `translate3d(-${cardMoveX}%, -${cardMoveY}%, 0)`;
@@ -360,7 +376,9 @@ const Hero = () => {
             </Cards>
             <TextBox>
                 <Text>
-                    <TextTitle>{t("hero-title")} <TitleSpan>{t("hero-span")}</TitleSpan></TextTitle>
+                    <TextTitleOne>{t("hero-title-one")}</TextTitleOne>
+                    <TextTitleTwo>{t("hero-title-two")}</TextTitleTwo>
+                    <TitleSpan>{t("hero-span")}</TitleSpan>
                     <Description>{t("hero-description")}</Description>
                 </Text>
                 <Link to="https://t.me/pavelzolotin">

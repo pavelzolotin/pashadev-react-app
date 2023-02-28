@@ -34,6 +34,13 @@ const GlobalStyle = createGlobalStyle`
     border: none;
   }
 
+  h1 {
+    font-family: 'Library 3 AM';
+    font-weight: 400;
+    line-height: 1.4;
+    color: #fff;
+  }
+  
   a {
     display: block;
     color: #fff;

@@ -1,5 +1,6 @@
 {
-  "hero-title": "Hi there!\nMy name is\n",
+  "hero-title-one": "Hello!",
+  "hero-title-two": "\nMy name is",
   "hero-span": "Pavel",
   "hero-description": "I'm a web developer and I create user interfaces",
   "hero-button": "Contact me",
@@ -8,9 +9,9 @@
   "about-description-span": "\nThe technology stack I use:",
   "about-description-part-two": "\nHTML5 / CSS3 / SCSS / Tailwind CSS /\nJavaScript / TypeScript / React JS / Redux /\nstyled-components / Material UI /\nNode JS / Express JS / MongoDB / PostgreSQL\n\n- in my work I use the BEM methodology and OOP principles\n- experienced in working with PHP and creating customized themes on WordPress\n- I actively use the Git version control system\n- use Sass/SCSS for faster site layout\n- use an ESLint linter\n- to build the project files, I use Webpack\n- have skills in cross-browser and adaptive layout\n- also work with layouts from Figma\n- I love Pixel Perfect",
   "projects-title": "Examples of some work",
-  "project-one-description": "Movie App project with cards about movies received from API.",
-  "project-two-description": "YouTube Clone Application built with MERN Stack.",
-  "project-three-description": "App about VR devices built with Next.js.",
+  "project-description-one": "Movie App project with cards about movies received from API.",
+  "project-description-two": "YouTube Clone Application built with MERN Stack.",
+  "project-description-three": "App about VR devices built with Next.js.",
   "project-stack": "Stack",
   "project-button": "Demo"
 }

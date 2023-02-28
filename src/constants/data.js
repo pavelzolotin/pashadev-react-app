@@ -83,7 +83,7 @@ export const projects = [
         id: 1,
         image: require('../img/cinematika-screen-one-large.png'),
         title: 'Cinematika',
-        description: 'project-one-description',
+        description: 'project-description-one',
         stack: `React
                 React Router v6
                 Axios
@@ -97,7 +97,7 @@ export const projects = [
         id: 2,
         image: require('../img/newtube-screen-dark-one-large.png'),
         title: 'NewTube',
-        description: 'project-two-description',
+        description: 'project-description-two',
         stack: `React
                 React Router v6
                 React Redux-toolkit
@@ -116,7 +116,7 @@ export const projects = [
         id: 3,
         image: require('../img/metaverse-screen-large.png'),
         title: 'Metaverse',
-        description: 'project-three-description',
+        description: 'project-description-three',
         stack: `React
                 Next.js
                 Tailwind CSS
