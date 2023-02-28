@@ -229,7 +229,9 @@ const Footer = () => {
         cards.addEventListener('mousemove', (e) => {
             const mouseX = e.clientX / footerAnimationWidth;
             const mouseY = e.clientY / footerAnimationHeight;
+
             cards.style.transform = `translate3d(-${mouseX}%, -${mouseY}%, 0)`;
+            cards.style.transitionDuration = '2s';
         });
     };
 
