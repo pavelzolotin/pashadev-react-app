@@ -95,7 +95,7 @@ export const projects = [
     },
     {
         id: 2,
-        image: require('../img/newtube-screen-dark-one-large.png'),
+        image: require('../img/newtube-screen-dark.png'),
         title: 'NewTube',
         description: 'project-description-two',
         stack: `React
