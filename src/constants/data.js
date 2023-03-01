@@ -1,23 +1,23 @@
 export const heroCards = [
     {
         id: 1,
-        title: 'JavaScript'
+        image: require('../img/js-icon.png'),
     },
     {
         id: 2,
-        title: 'React JS'
+        image: require('../img/react-js-icon.png'),
     },
     {
         id: 3,
-        title: 'Node JS'
+        image: require('../img/next-js-icon.png'),
     },
     {
         id: 4,
-        title: 'SCSS'
+        image: require('../img/node-js-icon.png'),
     },
     {
         id: 5,
-        title: 'TypeScript'
+        image: require('../img/ts-icon.png'),
     }
 ];
 

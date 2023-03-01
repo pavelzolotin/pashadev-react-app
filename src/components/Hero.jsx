@@ -37,57 +37,24 @@ const Cards = styled.div`
   }
 `;
 
-const CardItem = styled.div`
+const CardItem = styled.img`
   position: absolute;
-  width: 17rem;
-  height: 10rem;
   z-index: 1;
-  border-radius: 0.5rem 3rem 0.5rem 3rem;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.19), 0 .6rem .6rem rgba(0, 0, 0, 0.23);
-  transition: transform .3s;
-  overflow: hidden;
-
-  &:hover:before {
-    transform: translateY(-3rem);
-    transition: transform .3s;
-  }
-
-  &:before {
-    position: absolute;
-    font-size: 6rem;
-    font-family: 'Library 3 AM';
-    color: #fff;
-    opacity: .2;
-    transition: transform .3s;
-  }
 
   &:nth-child(1) {
+    border-radius: 1rem;
     top: 14%;
-    left: -9%;
-    background: #f0d91d;
-
-    &:before {
-      content: 'JS';
-      right: 0;
-      bottom: -2.5rem;
-    }
+    left: -8%;
 
     @media (min-width: 1250px) and (max-width: 1440px) {
       top: 7%;
-      left: 2%;
+      left: 0;
     }
   }
 
   &:nth-child(2) {
     top: 4%;
     left: 32%;
-    background: #61dbfb;
-
-    &:before {
-      content: 'React';
-      right: -5rem;
-      bottom: -2.5rem;
-    }
 
     @media (min-width: 1250px) and (max-width: 1440px) {
       top: -4%;
@@ -97,14 +64,7 @@ const CardItem = styled.div`
 
   &:nth-child(3) {
     top: 30%;
-    left: 53%;
-    background: #87bf00;
-
-    &:before {
-      content: 'Node';
-      right: -1rem;
-      bottom: -2.5rem;
-    }
+    left: 57%;
 
     @media (min-width: 1250px) and (max-width: 1440px) {
       left: 55%;
@@ -112,39 +72,20 @@ const CardItem = styled.div`
   }
 
   &:nth-child(4) {
-    bottom: 22%;
-    left: 48%;
-    background: #ca6092;
-
-    &:before {
-      content: 'SCSS';
-      right: -1rem;
-      bottom: -2.5rem;
-    }
+    bottom: 23%;
+    left: 52%;
   }
 
   &:nth-child(5) {
+    border-radius: 1rem;
     bottom: 12%;
-    left: -4%;
-    background: #2d79c7;
-
-    &:before {
-      content: 'TS';
-      right: 0;
-      bottom: -2.5rem;
-    }
+    left: 0;
 
     @media (min-width: 1250px) and (max-width: 1440px) {
       bottom: 15%;
-      left: -3%;
+      left: 4%;
     }
   }
-`;
-
-const CardTitle = styled.h3`
-  margin: 1rem 0 0 1rem;
-  font-size: 2rem;
-  color: #fff;
 `;
 
 const TextBox = styled.div`
@@ -165,15 +106,14 @@ const Text = styled.div`
   width: 100%;
   margin: 0 auto 2rem auto;
   padding: 10rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 0.5rem 6rem 6rem 0.5rem;
   transition: background-color .3s;
 
   @media (max-width: 767px) {
-    position: inherit;
     width: 100%;
     margin: 0;
     padding: 3rem 0 3rem 0;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 0.5rem 6rem 6rem 0.5rem;
   }
 
   &:hover {
@@ -184,27 +124,23 @@ const Text = styled.div`
 
 const TextTitleOne = styled.h1`
   margin: auto;
-  font-size: 8rem;
+  font-size: 10rem;
   position: absolute;
   transform-origin: top left;
-  left: 0;
+  left: -7rem;
   top: 50%;
   transform: rotate(-90deg) translateX(-50%);
   opacity: .1;
   z-index: -1;
 
   @media (max-width: 767px) {
-    transform: none;
-    top: 2rem;
-    left: 0;
-    right: 0;
-    opacity: .03;
+    display: none;
   }
 `;
 
 const TextTitleTwo = styled.h1`
   width: 100%;
-  font-size: 5.2rem;
+  font-size: 6.5rem;
 
   @media (max-width: 767px) {
     font-size: 3.7rem;
@@ -212,8 +148,9 @@ const TextTitleTwo = styled.h1`
 `;
 
 const TitleSpan = styled.span`
+  display: block;
   font-family: 'Library 3 AM';
-  font-size: 5rem;
+  font-size: 6.5rem;
   color: #fd640d;
 
   @media (max-width: 767px) {
@@ -336,49 +273,52 @@ const Hero = () => {
     const {t} = useTranslation();
 
     const wrapper = useRef(null);
-    const cardItems = useRef(null);
-    const heroImage = useRef(null);
+    const cards = useRef(null);
+    const image = useRef(null);
+    const titleOne = useRef(null);
+    const titleTwo = useRef(null);
+    const titleThree = useRef(null);
 
     useEffect(() => {
         cardsAnimation();
+        titleAnimation();
     });
 
     const cardsAnimation = () => {
-        const wrap = wrapper.current;
-        const cards = cardItems.current;
-        const image = heroImage.current;
-
-        wrap.addEventListener('mousemove', (e) => {
+        wrapper.current.addEventListener('mousemove', (e) => {
             const cardMoveX = e.clientX / (window.innerWidth / 5);
             const cardMoveY = e.clientY / (window.innerHeight / 8);
             const imageMoveX = e.clientX / (window.innerWidth / 10);
             const imageMoveY = e.clientY / (window.innerHeight / 15);
 
-            cards.style.transform = `translate3d(-${cardMoveX}%, -${cardMoveY}%, 0)`;
-            cards.style.transitionDuration = '2s';
-            image.style.transform = `translate3d(-${imageMoveX}%, -${imageMoveY}%, 0)`;
-            image.style.transitionDuration = '2s';
+            requestAnimationFrame(() => {
+                cards.current.style.transform = `translate3d(-${cardMoveX}%, -${cardMoveY}%, 0)`;
+                cards.current.style.transitionDuration = '2s';
+                image.current.style.transform = `translate3d(-${imageMoveX}%, -${imageMoveY}%, 0)`;
+                image.current.style.transitionDuration = '2s';
+            });
+        });
+    };
+
+    const titleAnimation = () => {
+        window.addEventListener('scroll', () => {
+            let offsetY = window.scrollY;
+
+            requestAnimationFrame(() => {
+                titleOne.current.style.transform = `rotate(-90deg) translateX(calc(-20vh + ${offsetY}px))`;
+                titleTwo.current.style.transform = `translateX(calc(0vh + ${offsetY}px))`;
+                titleThree.current.style.transform = `translateX(calc(0vh - ${offsetY}px))`;
+            });
         });
     };
 
     return (
         <Container ref={wrapper}>
-            <Cards ref={cardItems}>
-                {
-                    heroCards.map(card => (
-                        <CardItem
-                            key={card.id}
-                        >
-                            <CardTitle>{card.title}</CardTitle>
-                        </CardItem>
-                    ))
-                }
-            </Cards>
             <TextBox>
                 <Text>
-                    <TextTitleOne>{t("hero-title-one")}</TextTitleOne>
-                    <TextTitleTwo>{t("hero-title-two")}</TextTitleTwo>
-                    <TitleSpan>{t("hero-span")}</TitleSpan>
+                    <TextTitleOne ref={titleOne}>{t("hero-title-one")}</TextTitleOne>
+                    <TextTitleTwo ref={titleTwo}>{t("hero-title-two")}</TextTitleTwo>
+                    <TitleSpan ref={titleThree}>{t("hero-span")}</TitleSpan>
                     <Description>{t("hero-description")}</Description>
                 </Text>
                 <Link to="https://t.me/pavelzolotin">
@@ -391,8 +331,19 @@ const Hero = () => {
                 </Link>
             </TextBox>
             <HeroImage>
-                <Img src={HeroImg} alt="hero-image" ref={heroImage}/>
+                <Img src={HeroImg} alt="hero-image" ref={image}/>
             </HeroImage>
+            <Cards ref={cards}>
+                {
+                    heroCards.map(card => (
+                        <CardItem
+                            key={card.id}
+                            src={card.image}
+                        >
+                        </CardItem>
+                    ))
+                }
+            </Cards>
         </Container>
     );
 };
