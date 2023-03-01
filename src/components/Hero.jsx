@@ -63,11 +63,11 @@ const CardItem = styled.img`
   }
 
   &:nth-child(3) {
-    top: 30%;
+    top: 24%;
     left: 57%;
 
     @media (min-width: 1250px) and (max-width: 1440px) {
-      left: 55%;
+      top: 20%;
     }
   }
 
@@ -95,9 +95,14 @@ const TextBox = styled.div`
   width: 50%;
   text-align: center;
 
+  @media (min-width: 1250px) and (max-width: 1440px) {
+    width: 60%;
+  }
+
   @media (max-width: 767px) {
     width: 100%;
     margin-top: 2rem;
+    overflow-x: hidden;
   }
 `;
 
