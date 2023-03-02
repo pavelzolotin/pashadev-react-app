@@ -131,7 +131,7 @@ const Card = styled.div`
 `;
 
 const CardImg = styled.img`
-  opacity: .3;
+  opacity: .1;
 `;
 
 const Wrapper = styled.div`

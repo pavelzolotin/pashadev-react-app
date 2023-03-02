@@ -182,6 +182,7 @@ const Button = styled.button`
   margin: 3rem auto 0 auto;
   padding: 1.9rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.19), 0 .5rem .3rem -.2rem rgba(0, 0, 0, 0.23);
+  z-index: 1;
 
   @media (max-width: 767px) {
     margin: 3rem auto 0 auto;
