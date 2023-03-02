@@ -89,7 +89,7 @@ export const projects = [
                 Axios
                 Styled-components
                 Material UI`,
-        link_first: 'https://github.com/pavelzolotin/movie-react-app',
+        link_first: 'https://github.com/pavelzolotin/cinematika-react-app',
         link_second: 'https://cinematika.netlify.app',
         alt: 'project-cinematika'
     },
@@ -121,7 +121,7 @@ export const projects = [
                 Next.js
                 Tailwind CSS
                 Framer Motion`,
-        link_first: 'https://github.com/pavelzolotin/metaverse-react-app',
+        link_first: 'https://github.com/pavelzolotin/metaverse-next-js-app',
         link_second: 'https://mad-metaverse.netlify.app/',
         alt: 'project-metaverse'
     }
