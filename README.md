@@ -1,6 +1,6 @@
 # PASHADEV
 
-Portfolio React App.
+My personal multilingual portfolio.
 
 Stack:
 
