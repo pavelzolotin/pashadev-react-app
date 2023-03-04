@@ -93,6 +93,7 @@ const TextBox = styled.div`
   flex-direction: column;
   align-items: center;
   width: 50%;
+  padding-bottom: 7rem;
   text-align: center;
 
   @media (min-width: 1250px) and (max-width: 1440px) {
@@ -109,7 +110,7 @@ const TextBox = styled.div`
 const Text = styled.div`
   position: relative;
   width: 100%;
-  margin: 0 auto 2rem auto;
+  margin: 0 auto;
   padding: 10rem;
   transition: background-color .3s;
 
@@ -179,7 +180,7 @@ const Description = styled.p`
 
 const Button = styled.button`
   position: relative;
-  margin: 3rem auto 0 auto;
+  margin: -3rem auto 0 auto;
   padding: 1.9rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.19), 0 .5rem .3rem -.2rem rgba(0, 0, 0, 0.23);
   z-index: 1;
