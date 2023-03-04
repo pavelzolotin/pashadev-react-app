@@ -1,7 +1,6 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import styled, {createGlobalStyle} from 'styled-components';
-import GlobalFonts from './fonts/fonts';
 
 import Cursor from './components/Cursor';
 import Header from './components/Header';
@@ -40,7 +39,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.4;
     color: #fff;
   }
-  
+
   a {
     display: block;
     color: #fff;
@@ -84,7 +83,6 @@ function App() {
     return (
         <BrowserRouter>
             <GlobalStyle/>
-            <GlobalFonts/>
             <Cursor/>
             <Container>
                 <Header/>

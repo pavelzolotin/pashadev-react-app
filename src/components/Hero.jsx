@@ -239,7 +239,7 @@ const ButtonText = styled.span`
   font-family: 'Play', sans-serif;
   font-size: 1.8rem;
   font-weight: 500;
-  letter-spacing: .3rem;
+  letter-spacing: .2rem;
   text-transform: uppercase;
   color: #fff;
 `;
