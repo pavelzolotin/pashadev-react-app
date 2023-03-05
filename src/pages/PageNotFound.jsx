@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 import styled from 'styled-components';
 
-import HeroImg from '../img/hero-img.png';
+import HeroImg from '../assets/img/hero-img.png';
 
 const Container = styled.div`
   display: flex;

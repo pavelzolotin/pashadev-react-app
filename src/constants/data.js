@@ -1,78 +1,78 @@
 export const heroCards = [
     {
         id: 1,
-        image: require('../img/js-icon.png'),
+        image: require('../assets/img/js-icon.png'),
     },
     {
         id: 2,
-        image: require('../img/react-js-icon.png'),
+        image: require('../assets/img/react-js-icon.png'),
     },
     {
         id: 3,
-        image: require('../img/next-js-icon.png'),
+        image: require('../assets/img/next-js-icon.png'),
     },
     {
         id: 4,
-        image: require('../img/node-js-icon.png'),
+        image: require('../assets/img/node-js-icon.png'),
     },
     {
         id: 5,
-        image: require('../img/ts-icon.png'),
+        image: require('../assets/img/ts-icon.png'),
     }
 ];
 
 export const aboutCards = [
     {
         id: 1,
-        image: require('../img/html-logo.png'),
+        image: require('../assets/img/html-logo.png'),
         title: 'HTML',
         alt: 'html-icon'
     },
     {
         id: 2,
-        image: require('../img/scss-logo.png'),
+        image: require('../assets/img/scss-logo.png'),
         title: 'SCSS',
         alt: 'scss-icon'
     },
     {
         id: 3,
-        image: require('../img/js-logo.png'),
+        image: require('../assets/img/js-logo.png'),
         title: 'JavaScript',
         alt: 'javascript-icon'
     },
     {
         id: 4,
-        image: require('../img/typescript-logo.png'),
+        image: require('../assets/img/typescript-logo.png'),
         title: 'TypeScript',
         alt: 'typescript-icon'
     },
     {
         id: 5,
-        image: require('../img/react-js-logo.png'),
+        image: require('../assets/img/react-js-logo.png'),
         title: 'React JS',
         alt: 'reactjs-icon'
     },
     {
         id: 6,
-        image: require('../img/redux-logo.png'),
+        image: require('../assets/img/redux-logo.png'),
         title: 'Redux',
         alt: 'redux-icon'
     },
     {
         id: 7,
-        image: require('../img/node-js-logo.png'),
+        image: require('../assets/img/node-js-logo.png'),
         title: 'Node JS',
         alt: 'nodejs-icon'
     },
     {
         id: 8,
-        image: require('../img/git-logo.png'),
+        image: require('../assets/img/git-logo.png'),
         title: 'Git',
         alt: 'git-icon'
     },
     {
         id: 9,
-        image: require('../img/figma-logo.png'),
+        image: require('../assets/img/figma-logo.png'),
         title: 'Figma',
         alt: 'figma-icon'
     }
@@ -81,7 +81,7 @@ export const aboutCards = [
 export const projects = [
     {
         id: 1,
-        image: require('../img/cinematika-screen-one-large.png'),
+        image: require('../assets/img/cinematika-screen-one-large.png'),
         title: 'Cinematika',
         description: 'project-description-one',
         stack: `React
@@ -95,7 +95,7 @@ export const projects = [
     },
     {
         id: 2,
-        image: require('../img/newtube-screen-dark.png'),
+        image: require('../assets/img/newtube-screen-dark.png'),
         title: 'NewTube',
         description: 'project-description-two',
         stack: `React
@@ -114,7 +114,7 @@ export const projects = [
     },
     {
         id: 3,
-        image: require('../img/metaverse-screen-large.png'),
+        image: require('../assets/img/metaverse-screen-large.png'),
         title: 'Metaverse',
         description: 'project-description-three',
         stack: `React
@@ -130,86 +130,86 @@ export const projects = [
 export const footerCards = [
     {
         id: 1,
-        image: require('../img/footer-curly-brackets.png')
+        image: require('../assets/img/footer-curly-brackets.png')
     },
     {
         id: 2,
-        image: require('../img/footer-source-code.png')
+        image: require('../assets/img/footer-source-code.png')
     },
     {
         id: 3,
-        image: require('../img/footer-react.png')
+        image: require('../assets/img/footer-react.png')
     },
     {
         id: 4,
-        image: require('../img/footer-js.png')
+        image: require('../assets/img/footer-js.png')
     },
     {
         id: 5,
-        image: require('../img/footer-square-brackets.png')
+        image: require('../assets/img/footer-square-brackets.png')
     },
     {
         id: 6,
-        image: require('../img/footer-curly-brackets.png')
+        image: require('../assets/img/footer-curly-brackets.png')
     },
     {
         id: 7,
-        image: require('../img/footer-source-code.png')
+        image: require('../assets/img/footer-source-code.png')
     },
     {
         id: 8,
-        image: require('../img/footer-react.png')
+        image: require('../assets/img/footer-react.png')
     },
     {
         id: 9,
-        image: require('../img/footer-js.png')
+        image: require('../assets/img/footer-js.png')
     },
     {
         id: 10,
-        image: require('../img/footer-square-brackets.png')
+        image: require('../assets/img/footer-square-brackets.png')
     },
     {
         id: 11,
-        image: require('../img/footer-curly-brackets.png')
+        image: require('../assets/img/footer-curly-brackets.png')
     },
     {
         id: 12,
-        image: require('../img/footer-source-code.png')
+        image: require('../assets/img/footer-source-code.png')
     },
     {
         id: 13,
-        image: require('../img/footer-react.png')
+        image: require('../assets/img/footer-react.png')
     },
     {
         id: 14,
-        image: require('../img/footer-js.png')
+        image: require('../assets/img/footer-js.png')
     },
     {
         id: 15,
-        image: require('../img/footer-square-brackets.png')
+        image: require('../assets/img/footer-square-brackets.png')
     },
     {
         id: 16,
-        image: require('../img/footer-curly-brackets.png')
+        image: require('../assets/img/footer-curly-brackets.png')
     }
 ];
 
 export const footerNav = [
     {
         id: 1,
-        image: require('../img/github-icon.png'),
+        image: require('../assets/img/github-icon.png'),
         alt: 'footer-github-icon',
         link: 'https://github.com/pavelzolotin'
     },
     {
         id: 2,
-        image: require('../img/email-icon.png'),
+        image: require('../assets/img/email-icon.png'),
         alt: 'footer-mail-icon',
         link: 'mailto:zolotinpavel@gmail.com'
     },
     {
         id: 3,
-        image: require('../img/telegram-icon.png'),
+        image: require('../assets/img/telegram-icon.png'),
         alt: 'footer-telegram-icon',
         link: 'https://t.me/pavelzolotin'
     }

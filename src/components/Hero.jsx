@@ -5,7 +5,7 @@ import {useTranslation} from 'react-i18next';
 import styled from 'styled-components';
 
 import {heroCards} from '../constants/data';
-import HeroImg from '../img/hero-img.png';
+import HeroImg from '../assets/img/hero-img.png';
 
 const Container = styled.div`
   display: flex;
