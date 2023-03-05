@@ -1,3 +1,16 @@
+export const languages = [
+    {
+        id: 1,
+        type: 'ru',
+        language: 'ru'
+    },
+    {
+        id: 2,
+        type: 'en',
+        language: 'en'
+    }
+];
+
 export const heroCards = [
     {
         id: 1,
@@ -194,7 +207,7 @@ export const footerCards = [
     }
 ];
 
-export const footerNav = [
+export const iconsNav = [
     {
         id: 1,
         image: require('../assets/img/github-icon.png'),

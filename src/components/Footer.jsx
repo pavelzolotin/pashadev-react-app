@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 import Logo from '../assets/img/logo.png';
 import {footerCards} from '../constants/data';
-import {footerNav} from '../constants/data';
+import {iconsNav} from '../constants/data';
 
 const Container = styled.div`
   display: flex;
@@ -256,8 +256,8 @@ const Footer = () => {
                 </LogoBox>
                 <Navigation>
                     {
-                        footerNav.map(icon => (
-                            <Link to={icon.link} key={icon.id}>
+                        iconsNav.map(icon => (
+                            <Link to={icon.link} key={icon.id} target="_blank">
                                 <NavIcon
                                     key={icon.id}
                                 >

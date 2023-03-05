@@ -5,7 +5,8 @@ import {useTranslation} from 'react-i18next';
 import styled from 'styled-components';
 
 import Logo from '../assets/img/logo.png';
-import {footerNav} from '../constants/data';
+import {iconsNav} from '../constants/data';
+import {languages} from '../constants/data';
 
 const Container = styled.div`
   display: flex;
@@ -125,19 +126,6 @@ const NavIconImg = styled.img`
   height: 100%;
 `;
 
-const languages = [
-    {
-        id: 1,
-        type: 'ru',
-        language: 'ru'
-    },
-    {
-        id: 2,
-        type: 'en',
-        language: 'en'
-    }
-];
-
 const Header = () => {
     const {i18n} = useTranslation();
 
@@ -190,8 +178,8 @@ const Header = () => {
                     </Language>
                     <SocialIcons>
                         {
-                            footerNav.map(icon => (
-                                <Link to={icon.link} key={icon.id}>
+                            iconsNav.map(icon => (
+                                <Link to={icon.link} key={icon.id} target="_blank">
                                     <NavIcon
                                         key={icon.id}
                                     >
