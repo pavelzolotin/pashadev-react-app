@@ -159,12 +159,12 @@ const Project = ({image, title, description, stack, link_first, link_second, alt
                             {stack}
                         </Description>
                         <Buttons>
-                            <Link to={link_first}>
+                            <Link to={link_first} target="_blank">
                                 <Button>
                                     <span>Github</span>
                                 </Button>
                             </Link>
-                            <Link to={link_second}>
+                            <Link to={link_second} target="_blank">
                                 <Button>
                                     <span>{t("project-button")}</span>
                                 </Button>
