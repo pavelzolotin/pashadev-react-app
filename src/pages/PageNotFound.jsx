@@ -17,7 +17,7 @@ const Container = styled.div`
   @media (max-width: 767px) {
     flex-direction: column;
     justify-content: flex-start;
-    height: 70vh;
+    margin-top: 1rem;
   }
 `;
 
@@ -30,8 +30,10 @@ const Image = styled.div`
   height: 56rem;
 
   @media (max-width: 767px) {
-    width: 15rem;
-    height: 15rem;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    height: 16rem;
   }
 `;
 
@@ -44,8 +46,6 @@ const Img = styled.img`
   @media (max-width: 767px) {
     width: 100%;
     height: 100%;
-    top: 5%;
-    right: 0;
   }
 `;
 
@@ -59,7 +59,7 @@ const TextBox = styled.div`
 
   @media (max-width: 767px) {
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
 `;
 
@@ -116,7 +116,7 @@ const Button = styled.button`
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.19), 0 .5rem .3rem -.2rem rgba(0, 0, 0, 0.23);
 
   @media (max-width: 767px) {
-    margin: 1.5rem auto 0 auto;
+    margin: 3rem auto 0 auto;
   }
 
   &:before {
@@ -168,15 +168,12 @@ const PageNotFound = () => {
     });
 
     const cardsAnimation = () => {
-        const wrap = wrapper.current;
-        const image = heroImage.current;
-
-        wrap.addEventListener('mousemove', (e) => {
-            const imageMoveX = e.clientY / (window.innerWidth / 15);
+        wrapper.current.addEventListener('mousemove', (e) => {
+            const imageMoveX = e.clientX / (window.innerWidth / 10);
             const imageMoveY = e.clientY / (window.innerHeight / 15);
 
-            image.style.transform = `translate3d(-${imageMoveX}%, -${imageMoveY}%, 0)`;
-            image.style.transitionDuration = '2s';
+            heroImage.current.style.transform = `translate3d(-${imageMoveX}%, -${imageMoveY}%, 0)`;
+            heroImage.current.style.transitionDuration = '2s';
         });
     };
 
