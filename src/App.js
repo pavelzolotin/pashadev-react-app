@@ -1,6 +1,7 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import styled, {createGlobalStyle} from 'styled-components';
+import Library from './fonts/library3am.woff2';
 
 import Cursor from './components/Cursor';
 import Header from './components/Header';
@@ -8,6 +9,12 @@ import Home from './pages/Home';
 import PageNotFound from './pages/PageNotFound';
 
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: 'Library 3 AM';
+    src: local('Library 3AM'),
+    url(${Library}) format('woff2');
+  }
+
   *,
   *::before,
   *::after {
