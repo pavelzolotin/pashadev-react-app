@@ -216,9 +216,6 @@ const CopyDescription = styled.p`
 const Footer = () => {
     const footerItems = useRef(null);
 
-    const footerAnimationWidth = window.innerWidth / 7;
-    const footerAnimationHeight = window.innerHeight / 20;
-
     useEffect(() => {
         cardsAnimation();
     });
@@ -227,8 +224,8 @@ const Footer = () => {
         const cards = footerItems.current;
 
         cards.addEventListener('mousemove', (e) => {
-            const mouseX = e.clientX / footerAnimationWidth;
-            const mouseY = e.clientY / footerAnimationHeight;
+            const mouseX = e.clientX / (window.innerWidth / 7);
+            const mouseY = e.clientY / (window.innerHeight / 20);
 
             cards.style.transform = `translate3d(-${mouseX}%, -${mouseY}%, 0)`;
             cards.style.transitionDuration = '2s';
