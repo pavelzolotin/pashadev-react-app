@@ -5,16 +5,16 @@ import styled from 'styled-components';
 
 const Box = styled.div`
   overflow-x: hidden;
-
+  
   &:nth-child(2) {
     @media (max-width: 767px) {
       margin-top: 2rem;
     }
   }
-
+  
   &:last-child {
     margin-top: 5rem;
-
+    
     @media (max-width: 767px) {
       margin-top: 0;
     }
@@ -36,7 +36,7 @@ const Image = styled.div`
   width: 1000px;
   margin-left: 20rem;
   z-index: 1;
-
+  
   @media (max-width: 767px) {
     margin-left: 10rem;
   }
@@ -60,7 +60,7 @@ const ProjectH2 = styled.h2`
   font-size: 10vw;
   color: #fff;
   text-shadow: .3rem .3rem #222222;
-
+  
   @media (max-width: 767px) {
     font-size: 12vw;
   }
@@ -74,7 +74,7 @@ const Description = styled.p`
   line-height: 4rem;
   letter-spacing: .8px;
   white-space: pre-line;
-
+  
   @media (max-width: 767px) {
     width: 420px;
     margin: 0 4rem 0 12rem;
@@ -105,7 +105,7 @@ const Button = styled.button`
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.19), 0 .5rem .3rem -.2rem rgba(0, 0, 0, 0.23);
   overflow: hidden;
-
+  
   &::after {
     content: '';
     display: flex;
@@ -120,17 +120,17 @@ const Button = styled.button`
     background-color: #fd640d59;
     color: #fff;
   }
-
+  
   &:hover {
     &::after {
       transform: translateX(100%);
     }
   }
-
+  
   &:nth-child(1) {
     margin-right: 5rem;
   }
-
+  
   @media (max-width: 767px) {
     margin-top: 3rem;
   }

@@ -279,48 +279,47 @@ const Img = styled.img`
 const Hero = () => {
     const {t} = useTranslation();
 
-    const wrapper = useRef(null);
-    const cards = useRef(null);
+    const icons = useRef(null);
     const image = useRef(null);
     const titleOne = useRef(null);
     const titleTwo = useRef(null);
     const titleThree = useRef(null);
 
     useEffect(() => {
-        cardsAnimation();
-        titleAnimation();
+        const cards = icons.current;
+        cards.addEventListener('mousemove', (e) => cardsAnimation(e));
+        window.addEventListener('scroll', titleAnimation);
+
+        return () => {
+            cards.removeEventListener('mousemove', (e) => cardsAnimation(e));
+            window.removeEventListener('scroll', titleAnimation);
+        };
     });
 
-    const cardsAnimation = () => {
-        wrapper.current.addEventListener('mousemove', (e) => {
-            const cardMoveX = e.clientX / (window.innerWidth / 5);
-            const cardMoveY = e.clientY / (window.innerHeight / 8);
-            const imageMoveX = e.clientX / (window.innerWidth / 10);
-            const imageMoveY = e.clientY / (window.innerHeight / 15);
+    const cardsAnimation = (e) => {
+        const cardMoveX = e.clientX / (window.innerWidth / 5);
+        const cardMoveY = e.clientY / (window.innerHeight / 8);
 
-            requestAnimationFrame(() => {
-                cards.current.style.transform = `translate3d(-${cardMoveX}%, -${cardMoveY}%, 0)`;
-                cards.current.style.transitionDuration = '2s';
-                image.current.style.transform = `translate3d(-${imageMoveX}%, -${imageMoveY}%, 0)`;
-                image.current.style.transitionDuration = '2s';
-            });
+        requestAnimationFrame(() => {
+            icons.current.style.transform = `translate3d(-${cardMoveX}%, -${cardMoveY}%, 0)`;
+            icons.current.style.transitionDuration = '2s';
+            image.current.style.transform = `translate3d(-${cardMoveX}%, -${cardMoveY}%, 0)`;
+            image.current.style.transitionDuration = '2s';
         });
     };
 
     const titleAnimation = () => {
-        window.addEventListener('scroll', () => {
-            let offsetY = window.scrollY;
+        let offsetY = window.scrollY;
 
-            requestAnimationFrame(() => {
-                titleOne.current.style.transform = `rotate(-90deg) translateX(calc(-20vh + ${offsetY}px))`;
-                titleTwo.current.style.transform = `translateX(calc(0vh + ${offsetY}px))`;
-                titleThree.current.style.transform = `translateX(calc(0vh - ${offsetY}px))`;
-            });
+        requestAnimationFrame(() => {
+            titleOne.current.style.transform = `rotate(-90deg) translateX(calc(-20vh + ${offsetY}px))`;
+            titleTwo.current.style.transform = `translateX(calc(0vh + ${offsetY}px))`;
+            titleThree.current.style.transform = `translateX(calc(0vh - ${offsetY}px))`;
         });
     };
 
     return (
-        <Container ref={wrapper}>
+        <Container>
             <TextBox>
                 <Text>
                     <TextTitleOne ref={titleOne}>{t("hero-title-one")}</TextTitleOne>
@@ -340,7 +339,7 @@ const Hero = () => {
             <HeroImage>
                 <Img src={HeroImg} alt="hero-image" ref={image}/>
             </HeroImage>
-            <Cards ref={cards}>
+            <Cards ref={icons}>
                 {
                     heroCards.map(card => (
                         <CardItem

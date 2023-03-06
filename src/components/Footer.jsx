@@ -217,18 +217,21 @@ const Footer = () => {
     const footerItems = useRef(null);
 
     useEffect(() => {
-        cardsAnimation();
+        const cards = footerItems.current;
+        cards.addEventListener('mousemove', (e) => cardsAnimation(e));
+
+        return () => {
+            cards.removeEventListener('mousemove', (e) => cardsAnimation(e));
+        };
     });
 
-    const cardsAnimation = () => {
-        const cards = footerItems.current;
+    const cardsAnimation = (e) => {
+        const mouseX = e.clientX / (window.innerWidth / 7);
+        const mouseY = e.clientY / (window.innerHeight / 20);
 
-        cards.addEventListener('mousemove', (e) => {
-            const mouseX = e.clientX / (window.innerWidth / 7);
-            const mouseY = e.clientY / (window.innerHeight / 20);
-
-            cards.style.transform = `translate3d(-${mouseX}%, -${mouseY}%, 0)`;
-            cards.style.transitionDuration = '2s';
+        requestAnimationFrame(() => {
+            footerItems.current.style.transform = `translate3d(-${mouseX}%, -${mouseY}%, 0)`;
+            footerItems.current.style.transitionDuration = '2s';
         });
     };
 
