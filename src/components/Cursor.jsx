@@ -6,7 +6,7 @@ const CursorDot = styled.div`
   height: .6rem;
   background-color: #ffffff;
   pointer-events: none;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -14,7 +14,7 @@ const CursorDot = styled.div`
   opacity: 1;
   transition: width .3s, height .3s, transform .3s;
   z-index: 10;
-
+  
   @media (max-width: 767px) {
     display: none;
   }
@@ -83,16 +83,16 @@ const Cursor = () => {
         document.querySelectorAll('a, button').forEach(el => {
             el.addEventListener('mouseover', () => {
                 cursorEnlarged.current = true;
-                toggleCursorSize();
                 dotOutline.current.classList.add('dot-color');
                 dotOutline.current.style.transition = 'width .3s, height .3s, background-color .5s';
+                toggleCursorSize();
             });
 
             el.addEventListener('mouseleave', () => {
                 cursorEnlarged.current = false;
-                toggleCursorSize();
                 dotOutline.current.classList.remove('dot-color');
                 dotOutline.current.style.transition = 'width .3s, height .3s, background-color .5s';
+                toggleCursorSize();
             });
         });
     };
@@ -121,8 +121,8 @@ const Cursor = () => {
         cursorVisible.current = true;
         toggleCursorVisibility();
 
-        endX.current = e.pageX;
-        endY.current = e.pageY;
+        endX.current = e.clientX;
+        endY.current = e.clientY;
 
         dot.current.style.top = endY.current + 'px';
         dot.current.style.left = endX.current + 'px';
