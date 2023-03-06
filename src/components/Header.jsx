@@ -135,6 +135,10 @@ const Header = () => {
     useEffect(() => {
         window.addEventListener('scroll', isSticky);
         localStorage.setItem('language', languageActive);
+
+        return () => {
+            window.removeEventListener('scroll', isSticky);
+        };
     }, [languageActive]);
 
     const isSticky = () => {
