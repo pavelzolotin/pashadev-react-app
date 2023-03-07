@@ -294,7 +294,7 @@ const Hero = () => {
             cards.removeEventListener('mousemove', (e) => cardsAnimation(e));
             window.removeEventListener('scroll', titleAnimation);
         };
-    });
+    }, []);
 
     const cardsAnimation = (e) => {
         const cards = icons.current;

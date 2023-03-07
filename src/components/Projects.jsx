@@ -70,7 +70,7 @@ const Projects = () => {
             });
         }, main);
         return () => ctx.revert();
-    });
+    }, []);
 
     return (
         <Container ref={main}>

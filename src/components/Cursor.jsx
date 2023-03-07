@@ -58,8 +58,9 @@ const Cursor = () => {
             document.removeEventListener('mouseleave', mouseLeaveEvent);
 
             cancelAnimationFrame(requestRef.current);
-        }
-    });
+        };
+        // eslint-disable-next-line
+    }, []);
 
     const toggleCursorVisibility = () => {
         if (cursorVisible.current) {

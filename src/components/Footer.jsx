@@ -223,7 +223,7 @@ const Footer = () => {
         return () => {
             cards.removeEventListener('mousemove', (e) => cardsAnimation(e));
         };
-    });
+    }, []);
 
     const cardsAnimation = (e) => {
         const cards = footerItems.current;

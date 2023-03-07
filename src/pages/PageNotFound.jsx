@@ -165,7 +165,7 @@ const PageNotFound = () => {
 
     useEffect(() => {
         cardsAnimation();
-    });
+    }, []);
 
     const cardsAnimation = () => {
         wrapper.current.addEventListener('mousemove', (e) => {
