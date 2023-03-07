@@ -297,14 +297,17 @@ const Hero = () => {
     });
 
     const cardsAnimation = (e) => {
+        const cards = icons.current;
+        const img = image.current;
+
         const cardMoveX = e.clientX / (window.innerWidth / 5);
         const cardMoveY = e.clientY / (window.innerHeight / 8);
 
         requestAnimationFrame(() => {
-            icons.current.style.transform = `translate3d(-${cardMoveX}%, -${cardMoveY}%, 0)`;
-            icons.current.style.transitionDuration = '2s';
-            image.current.style.transform = `translate3d(-${cardMoveX}%, -${cardMoveY}%, 0)`;
-            image.current.style.transitionDuration = '2s';
+            cards.style.transform = `translate3d(-${cardMoveX}%, -${cardMoveY}%, 0)`;
+            cards.style.transitionDuration = '2s';
+            img.style.transform = `translate3d(-${cardMoveX}%, -${cardMoveY}%, 0)`;
+            img.style.transitionDuration = '2s';
         });
     };
 
