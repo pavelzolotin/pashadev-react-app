@@ -4,8 +4,6 @@ import {useTranslation} from 'react-i18next';
 import styled from 'styled-components';
 
 const Box = styled.div`
-  overflow-x: hidden;
-  
   &:nth-child(2) {
     @media (max-width: 767px) {
       margin-top: 2rem;
@@ -88,7 +86,11 @@ const Span = styled.span`
 const Buttons = styled.div`
   display: flex;
   justify-content: center;
-  margin: 5rem 5rem 0 0;
+  margin: 5rem 65rem 0 0;
+
+  @media (max-width: 767px) {
+    margin: 5rem 5rem 0 0;
+  }
 `;
 
 const Button = styled.button`
