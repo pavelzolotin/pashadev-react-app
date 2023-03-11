@@ -8,7 +8,7 @@ import Logo from '../assets/img/logo.png';
 import {iconsNav} from '../constants/data';
 import {languages} from '../constants/data';
 
-const Container = styled.div`
+const Container = styled.header`
   display: flex;
   align-items: center;
   position: sticky;

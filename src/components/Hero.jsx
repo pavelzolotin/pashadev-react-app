@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import {heroCards} from '../constants/data';
 import HeroImg from '../assets/img/hero-img.png';
 
-const Container = styled.div`
+const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;

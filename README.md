@@ -7,5 +7,5 @@ Stack:
 React\
 React Router v6\
 Styled-components\
-GSAP\
+Framer Motion\
 react-i18next

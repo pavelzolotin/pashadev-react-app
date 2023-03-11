@@ -2,43 +2,36 @@ import {Link} from 'react-router-dom';
 import {useTranslation} from 'react-i18next';
 
 import styled from 'styled-components';
+import {motion} from 'framer-motion';
+import {fadeIn, staggerContainer} from '../utils/motion';
 
 const Box = styled.div`
-  overflow-x: hidden;
-
-  &:nth-child(2) {
-    @media (max-width: 767px) {
-      margin-top: 2rem;
-    }
-  }
-
-  &:last-child {
-    margin-top: 5rem;
-
-    @media (max-width: 767px) {
-      margin-top: 0;
-    }
-  }
-`;
-
-const Wrap = styled.div`
   display: flex;
   align-items: center;
-  position: relative;
-  z-index: 1;
-  height: 100vh;
-`;
+  justify-content: space-between;
+  padding: 8rem 0 12rem 0;
+  height: 100%;
 
-const AnimationWrap = styled(Wrap)``;
+  @media (min-width: 1250px) and (max-width: 1600px) {
+    padding: 8rem 0 8rem 0;
+  }
+  
+  @media (max-width: 767px) {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 8rem;
+    padding: 0 1.5rem 7rem 1.5rem;
+    overflow-x: hidden;
+  }
+`;
 
 const Image = styled.div`
   position: relative;
-  width: 1000px;
-  margin-left: 12rem;
+  width: 50%;
   z-index: 1;
 
   @media (max-width: 767px) {
-    margin-left: 10rem;
+    width: 100%;
   }
 `;
 
@@ -48,27 +41,51 @@ const Img = styled.img`
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25), 0 .5rem 1rem .3rem rgba(0, 0, 0, 0.20);
 `;
 
-const Details = styled.div`
-  display: flex;
-  align-items: center;
-  margin-left: 12rem;
+const Space = styled.div`
+  margin-top: 7rem;
+
+  @media (max-width: 767px) {
+    margin-top: 5rem;
+  }
 `;
 
-const ProjectTitle = styled.div``;
+const Details = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 1250px) and (max-width: 1600px) {
+    width: 40%;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 5rem;
+  }
+`;
+
+const ProjectTitle = styled.div`
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+  }
+`;
 
 const ProjectH2 = styled.h2`
-  font-size: 10vw;
+  font-size: 12rem;
   color: #fff;
   text-shadow: .3rem .3rem #222222;
 
+  @media (min-width: 1250px) and (max-width: 1600px) {
+    font-size: 8rem;
+  }
+
   @media (max-width: 767px) {
-    font-size: 12vw;
+    font-size: 5rem;
   }
 `;
 
 const Description = styled.p`
-  width: 470px;
-  margin: 0 7rem 0 15rem;
+  width: 70%;
+  margin: 1rem 0 0 1rem;
   font-size: 2rem;
   color: #fff;
   line-height: 4rem;
@@ -76,8 +93,9 @@ const Description = styled.p`
   white-space: pre-line;
 
   @media (max-width: 767px) {
-    width: 420px;
-    margin: 0 4rem 0 12rem;
+    width: 100%;
+    margin: 1rem 0 0 0;
+    padding: 0 1rem 0 1rem;
   }
 `;
 
@@ -87,13 +105,21 @@ const Span = styled.span`
 
 const Buttons = styled.div`
   display: flex;
-  justify-content: center;
-  margin: 5rem 5rem 0 0;
+  display: -webkit-flex;
+  justify-content: end;
+  -webkit-justify-content: flex-end;
+  margin-top: 7rem;
+
+  @media (max-width: 767px) {
+    justify-content: center;
+    margin-top: 1rem;
+  }
 `;
 
 const Button = styled.button`
   position: relative;
   padding: 1.2rem 3rem;
+  margin: 0 2rem 0 2rem;
   font-family: 'Play', sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
@@ -127,10 +153,6 @@ const Button = styled.button`
     }
   }
 
-  &:nth-child(1) {
-    margin-right: 5rem;
-  }
-
   @media (max-width: 767px) {
     margin-top: 3rem;
   }
@@ -140,39 +162,52 @@ const Project = ({image, title, description, stack, link_first, link_second, alt
     const {t} = useTranslation();
 
     return (
-        <Box className="project">
-            <Wrap className="project__wrap">
-                <AnimationWrap className="project__animation-wrap">
-                    <Image>
-                        <Img src={image} alt={alt}/>
-                    </Image>
-                    <Details>
-                        <ProjectTitle>
-                            <ProjectH2>{title}</ProjectH2>
-                        </ProjectTitle>
-                        <Description>
-                            {t(description)}
-                            <br/>
-                            <br/>
-                            <Span>{t("project-stack")}:</Span>
-                            <br/>
-                            {stack}
-                        </Description>
-                        <Buttons>
-                            <Link to={link_first} target="_blank">
-                                <Button>
-                                    <span>Github</span>
-                                </Button>
-                            </Link>
-                            <Link to={link_second} target="_blank">
-                                <Button>
-                                    <span>{t("project-button")}</span>
-                                </Button>
-                            </Link>
-                        </Buttons>
-                    </Details>
-                </AnimationWrap>
-            </Wrap>
+        <Box
+            as={motion.div}
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{once: false, amount: 0.15}}
+        >
+            <Image
+                as={motion.div}
+                variants={fadeIn('right', 'tween', 0.2, 1)}
+            >
+                <Img src={image} alt={alt}/>
+            </Image>
+            <Details>
+                <ProjectTitle
+                    as={motion.div}
+                    variants={fadeIn('left', 'tween', 0.5, 1)}
+                >
+                    <ProjectH2>{title}</ProjectH2>
+                </ProjectTitle>
+                <Description
+                    as={motion.div}
+                    variants={fadeIn('left', 'tween', 0.7, 1)}
+                >
+                    {t(description)}
+                    <Space></Space>
+                    <Span>{t("project-stack")}:</Span>
+                    <br/>
+                    {stack}
+                </Description>
+                <Buttons
+                    as={motion.div}
+                    variants={fadeIn('left', 'tween', 1, 1)}
+                >
+                    <Link to={link_first} target="_blank">
+                        <Button>
+                            <span>Github</span>
+                        </Button>
+                    </Link>
+                    <Link to={link_second} target="_blank">
+                        <Button>
+                            <span>{t("project-button")}</span>
+                        </Button>
+                    </Link>
+                </Buttons>
+            </Details>
         </Box>
     );
 };

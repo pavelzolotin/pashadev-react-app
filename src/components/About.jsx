@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import {aboutCards} from '../constants/data';
 import Card from './Card';
 
-const Container = styled.div`
+const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -86,7 +86,7 @@ const Description = styled.p`
 
   @media (max-width: 767px) {
     width: 100%;
-    padding: 0 1.2rem 0 1.2rem;
+    padding: 0 1.2rem 0 1.6rem;
   }
 `;
 
@@ -107,10 +107,12 @@ const ImageWrapper = styled.div`
 
 const Box = styled.div`
   display: flex;
+  display: -webkit-flex;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: end;
+  -webkit-justify-content: flex-end;
   height: 100%;
 
   @media (max-width: 767px) {
