@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import {aboutCards} from '../constants/data';
 import Card from './Card';
 
-const Container = styled.section`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

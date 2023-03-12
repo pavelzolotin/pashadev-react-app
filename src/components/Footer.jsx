@@ -7,7 +7,7 @@ import Logo from '../assets/img/logo.png';
 import {footerCards} from '../constants/data';
 import {iconsNav} from '../constants/data';
 
-const Container = styled.footer`
+const Container = styled.div`
   display: flex;
   justify-content: center;
   position: relative;

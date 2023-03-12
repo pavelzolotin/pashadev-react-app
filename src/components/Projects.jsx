@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import {projects} from '../constants/data';
 import Project from '../components/Project';
 
-const Container = styled.section`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;

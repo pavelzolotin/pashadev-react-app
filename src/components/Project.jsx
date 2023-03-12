@@ -15,7 +15,7 @@ const Box = styled.div`
   @media (min-width: 1250px) and (max-width: 1600px) {
     padding: 8rem 0 8rem 0;
   }
-  
+
   @media (max-width: 767px) {
     flex-direction: column;
     justify-content: center;
@@ -42,11 +42,7 @@ const Img = styled.img`
 `;
 
 const Space = styled.div`
-  margin-top: 7rem;
-
-  @media (max-width: 767px) {
-    margin-top: 5rem;
-  }
+  margin-top: 5rem;
 `;
 
 const Details = styled.div`
