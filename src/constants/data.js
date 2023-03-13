@@ -37,39 +37,39 @@ export const heroCards = [
 export const aboutCards = [
     {
         id: 1,
-        image: require('../assets/img/html-logo.png'),
-        title: 'HTML',
-        alt: 'html-icon'
-    },
-    {
-        id: 2,
-        image: require('../assets/img/scss-logo.png'),
-        title: 'SCSS',
-        alt: 'scss-icon'
-    },
-    {
-        id: 3,
         image: require('../assets/img/js-logo.png'),
         title: 'JavaScript',
         alt: 'javascript-icon'
     },
     {
-        id: 4,
+        id: 2,
         image: require('../assets/img/typescript-logo.png'),
         title: 'TypeScript',
         alt: 'typescript-icon'
     },
     {
-        id: 5,
+        id: 3,
         image: require('../assets/img/react-js-logo.png'),
         title: 'React JS',
         alt: 'reactjs-icon'
     },
     {
-        id: 6,
+        id: 4,
+        image: require('../assets/img/next-js-logo.png'),
+        title: 'Next JS',
+        alt: 'nextjs-icon'
+    },
+    {
+        id: 5,
         image: require('../assets/img/redux-logo.png'),
         title: 'Redux',
         alt: 'redux-icon'
+    },
+    {
+        id: 6,
+        image: require('../assets/img/scss-logo.png'),
+        title: 'SCSS',
+        alt: 'scss-icon'
     },
     {
         id: 7,
