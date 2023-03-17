@@ -120,7 +120,7 @@ const CardText = styled.div`
   position: absolute;
   bottom: -4rem;
   left: -10%;
-  z-index: 100;
+  z-index: 1;
 
   @media (max-width: 767px) {
     left: 20%;
