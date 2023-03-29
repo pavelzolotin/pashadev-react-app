@@ -241,10 +241,11 @@ const Footer = () => {
             <Cards ref={footerItems}>
                 {
                     footerCards.map(card => (
-                        <Card
-                            key={card.id}
-                        >
-                            <CardImg src={card.image} alt=""/>
+                        <Card key={card.id}>
+                            <CardImg
+                                src={card.image}
+                                alt=""
+                            />
                         </Card>
                     ))
                 }
@@ -252,16 +253,17 @@ const Footer = () => {
             <Wrapper>
                 <LogoBox>
                     <a href="https://pashadev.ru">
-                        <LogoImg src={Logo} alt="Logo"/>
+                        <LogoImg
+                            src={Logo}
+                            alt="Logo"
+                        />
                     </a>
                 </LogoBox>
                 <Navigation>
                     {
                         iconsNav.map(icon => (
                             <Link to={icon.link} key={icon.id} target="_blank">
-                                <NavIcon
-                                    key={icon.id}
-                                >
+                                <NavIcon key={icon.id}>
                                     <NavIconImg
                                         src={icon.image}
                                         alt={icon.alt}

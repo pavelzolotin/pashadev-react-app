@@ -157,36 +157,36 @@ const Header = () => {
             <Box>
                 <LogoBox>
                     <Link to="/">
-                        <LogoImage src={Logo} alt="Logo"/>
+                        <LogoImage
+                            src={Logo}
+                            alt="Logo"
+                        />
                     </Link>
                 </LogoBox>
                 <Navigation>
                     <Language>
                         {
-                            languages
-                                .map((item, i) => (
-                                    <div key={item.id}>
-                                        {
-                                            i > 0 && <Span key={item}>/</Span>
-                                        }
-                                        <Button
-                                            key={item.id}
-                                            active={languageActive === item.type}
-                                            onClick={() => setActiveLanguage(item.type, item.language)}
-                                        >
-                                            {item.type}
-                                        </Button>
-                                    </div>
-                                ))
+                            languages.map((item, i) => (
+                                <div key={item.id}>
+                                    {
+                                        i > 0 && <Span key={item}>/</Span>
+                                    }
+                                    <Button
+                                        key={item.id}
+                                        active={languageActive === item.type}
+                                        onClick={() => setActiveLanguage(item.type, item.language)}
+                                    >
+                                        {item.type}
+                                    </Button>
+                                </div>
+                            ))
                         }
                     </Language>
                     <SocialIcons>
                         {
                             iconsNav.map(icon => (
                                 <Link to={icon.link} key={icon.id} target="_blank">
-                                    <NavIcon
-                                        key={icon.id}
-                                    >
+                                    <NavIcon key={icon.id}>
                                         <NavIconImg
                                             src={icon.image}
                                             alt={icon.alt}

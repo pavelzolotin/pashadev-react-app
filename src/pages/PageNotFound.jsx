@@ -181,17 +181,21 @@ const PageNotFound = () => {
         <>
             <Container ref={wrapper}>
                 <Image>
-                    <Img src={HeroImg} alt="hero-image" ref={heroImage}/>
+                    <Img
+                        ref={heroImage}
+                        src={HeroImg}
+                        alt="hero-image"
+                    />
                 </Image>
                 <TextBox>
                     <Text>
-                        <H1>Ошибка 404. <br/>Страница не найдена</H1>
+                        <H1>Ошибка 404. <br />Страница не найдена</H1>
                         <Description>Кажется такой страницы не существует</Description>
                     </Text>
                     <Link to="/">
                         <Button>
                             <ButtonIcon>
-                                <ButtonIconRect x="0" y="0" fill="none" width="100%" height="100%"/>
+                                <ButtonIconRect x="0" y="0" fill="none" width="100%" height="100%" />
                             </ButtonIcon>
                             <ButtonText>Вернуться на главную</ButtonText>
                         </Button>

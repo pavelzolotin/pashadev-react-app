@@ -89,17 +89,17 @@ const Container = styled.div``;
 function App() {
     return (
         <BrowserRouter>
-            <GlobalStyle/>
-            <Cursor/>
+            <GlobalStyle />
+            <Cursor />
             <Container>
-                <Header/>
+                <Header />
                 <Routes>
                     <Route path="/" element={
-                        <Home/>
-                    }/>
+                        <Home />
+                    } />
                     <Route path="*" element={
-                        <PageNotFound/>
-                    }/>
+                        <PageNotFound />
+                    } />
                 </Routes>
             </Container>
         </BrowserRouter>

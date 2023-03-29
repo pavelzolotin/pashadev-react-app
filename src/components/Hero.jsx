@@ -333,14 +333,18 @@ const Hero = () => {
                 <Link to="https://t.me/pavelzolotin" target="_blank">
                     <Button>
                         <ButtonIcon>
-                            <ButtonIconRect x="0" y="0" fill="none" width="100%" height="100%" className="rect"/>
+                            <ButtonIconRect x="0" y="0" fill="none" width="100%" height="100%" className="rect" />
                         </ButtonIcon>
                         <ButtonText>{t("hero-button")}</ButtonText>
                     </Button>
                 </Link>
             </TextBox>
             <HeroImage>
-                <Img src={HeroImg} alt="hero-image" ref={image}/>
+                <Img
+                    ref={image}
+                    src={HeroImg}
+                    alt="hero-image"
+                />
             </HeroImage>
             <Cards ref={icons}>
                 {

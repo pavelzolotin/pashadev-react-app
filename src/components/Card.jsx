@@ -39,7 +39,7 @@ const Box = styled.div`
   & .about__card__border, .about__card__image {
     transform: rotate(-10deg) skew(-10deg);
   }
-  
+
   @media (max-width: 767px) {
     margin: 0 0 6rem 0;
   }
@@ -150,12 +150,12 @@ const Card = ({title, image, alt}) => {
                 <Icon>
                     <defs>
                         <linearGradient id="grad-orange" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" style={{stopColor:"rgb(253,137,68)", stopOpacity:1}}/>
-                            <stop offset="100%" style={{stopColor:"rgb(153,75,23)", stopOpacity:1}}/>
+                            <stop offset="0%" style={{stopColor: "rgb(253,137,68)", stopOpacity: 1}} />
+                            <stop offset="100%" style={{stopColor: "rgb(153,75,23)", stopOpacity: 1}} />
                         </linearGradient>
                         <linearGradient id="grad-red" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stopColor="#D34F48"/>
-                            <stop offset="100%" stopColor="#772522"/>
+                            <stop offset="0%" stopColor="#D34F48" />
+                            <stop offset="100%" stopColor="#772522" />
                         </linearGradient>
                     </defs>
                     <Rect id="rect-grad" className="about__card__rect-gradient" fill="none"
@@ -165,7 +165,11 @@ const Card = ({title, image, alt}) => {
                 </Icon>
             </CardBorder>
             <Image className="about__card__image">
-                <Img src={image} alt={alt} className="about__card__img"/>
+                <Img
+                    className="about__card__img"
+                    src={image}
+                    alt={alt}
+                />
             </Image>
             <CardText>
                 <CardTitle className="about__card__title">{title}</CardTitle>

@@ -169,7 +169,10 @@ const Project = ({image, title, description, stack, link_first, link_second, alt
                 as={motion.div}
                 variants={fadeIn('right', 'tween', 0.2, 1)}
             >
-                <Img src={image} alt={alt}/>
+                <Img
+                    src={image}
+                    alt={alt}
+                />
             </Image>
             <Details>
                 <ProjectTitle
@@ -185,7 +188,7 @@ const Project = ({image, title, description, stack, link_first, link_second, alt
                     {t(description)}
                     <Space></Space>
                     <Span>{t("project-stack")}:</Span>
-                    <br/>
+                    <br />
                     {stack}
                 </Description>
                 <Buttons
