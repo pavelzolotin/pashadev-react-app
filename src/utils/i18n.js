@@ -10,9 +10,6 @@ i18n
     .init({
         debug: false,
         fallbackLng: 'ru',
-        interpolation: {
-            escapeValue: false,
-        },
         backend: {
             loadPath: '/locales/{{lng}}/{{ns}}.json'
         }

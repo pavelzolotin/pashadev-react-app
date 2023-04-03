@@ -133,8 +133,8 @@ const Header = () => {
     const [languageActive, setLanguageActive] = useState(localStorage.getItem('language') || languages[0].type);
 
     useEffect(() => {
-        window.addEventListener('scroll', isSticky);
         localStorage.setItem('language', languageActive);
+        window.addEventListener('scroll', isSticky);
 
         return () => {
             window.removeEventListener('scroll', isSticky);
