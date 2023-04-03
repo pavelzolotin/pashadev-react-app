@@ -130,16 +130,15 @@ const Header = () => {
     const {i18n} = useTranslation();
 
     const [sticky, setSticky] = useState(false);
-    const [languageActive, setLanguageActive] = useState(localStorage.getItem('language') || languages[0].type);
+    const [languageActive, setLanguageActive] = useState(languages[0].type);
 
     useEffect(() => {
-        localStorage.setItem('language', languageActive);
         window.addEventListener('scroll', isSticky);
 
         return () => {
             window.removeEventListener('scroll', isSticky);
         };
-    }, [languageActive]);
+    }, []);
 
     const isSticky = () => {
         const scrollTop = window.scrollY;
