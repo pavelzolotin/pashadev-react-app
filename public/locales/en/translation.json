@@ -9,9 +9,10 @@
   "about-description-span": "\nThe technology stack I use:",
   "about-description-part-two": "\nJavaScript / TypeScript / React JS /\nNext JS / Redux / Redux Toolkit /\nSCSS / CSS Modules / Tailwind CSS /\nstyled-components / Material UI /\nNode JS / Express JS / MongoDB / PostgreSQL\n\n- I actively use the Git version control system\n- use an ESLint linter\n- to build the project files, I use Webpack\n- for hard animation, I use Framer Motion and GSAP\n- have skills in cross-browser and adaptive layout\n- experienced in working with PHP and creating customized themes on WordPress\n- also work with layouts from Figma",
   "projects-title": "Examples of some work",
-  "project-description-one": "Movie App project with cards about movies received from API.",
-  "project-description-two": "YouTube Clone Application built with MERN Stack.",
-  "project-description-three": "App about VR devices built with Next.js.",
+  "project-description-one": "Movie App project with cards about movies received from API",
+  "project-description-two": "YouTube Clone Application built with MERN Stack",
+  "project-description-three": "App about VR devices built with Next.js",
+  "project-description-four": "Logitech computer peripherals and software store app",
   "project-stack": "Stack",
   "project-button": "Demo"
 }

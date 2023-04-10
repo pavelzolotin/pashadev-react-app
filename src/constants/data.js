@@ -137,6 +137,20 @@ export const projects = [
         link_first: 'https://github.com/pavelzolotin/metaverse-next-js-app',
         link_second: 'https://mad-metaverse.netlify.app/',
         alt: 'project-metaverse'
+    },
+    {
+        id: 4,
+        image: require('../assets/img/logi-screen.png'),
+        title: 'Logitech',
+        description: 'project-description-four',
+        stack: `React
+                React Router v6
+                Redux-toolkit
+                TypeScript
+                Axios`,
+        link_first: 'https://github.com/pavelzolotin/logitech-react-app',
+        link_second: 'https://logi-logitech.netlify.app/',
+        alt: 'project-logitech'
     }
 ];
 
