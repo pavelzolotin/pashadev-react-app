@@ -1,6 +1,6 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import styled, {createGlobalStyle} from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import Library from './assets/fonts/library3am.woff2';
 
 import Cursor from './components/Cursor';

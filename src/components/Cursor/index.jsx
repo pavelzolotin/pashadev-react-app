@@ -28,7 +28,7 @@ const CursorDotOutline = styled(CursorDot)`
   transition: width .3s, height .3s, transform .3s;
 `;
 
-const Cursor = () => {
+const Index = () => {
     const dot = useRef(null);
     const dotOutline = useRef(null);
     const cursorVisible = useRef(true);
@@ -151,4 +151,4 @@ const Cursor = () => {
     );
 };
 
-export default Cursor;
+export default Index;

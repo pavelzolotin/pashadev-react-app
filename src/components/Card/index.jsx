@@ -143,7 +143,7 @@ const CardTitle = styled.h3`
   }
 `;
 
-const Card = ({title, image, alt}) => {
+const Index = ({title, image, alt}) => {
     return (
         <Box className="about__card">
             <CardBorder className="about__card__border">
@@ -178,4 +178,4 @@ const Card = ({title, image, alt}) => {
     );
 };
 
-export default Card;
+export default Index;

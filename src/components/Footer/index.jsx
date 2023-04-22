@@ -3,9 +3,9 @@ import {Link} from 'react-router-dom';
 
 import styled from 'styled-components';
 
-import Logo from '../assets/img/logo.png';
-import {footerCards} from '../constants/data';
-import {iconsNav} from '../constants/data';
+import Logo from '../../assets/img/logo.png';
+import {footerCards} from '../../utils/data';
+import {iconsNav} from '../../utils/data';
 
 const Container = styled.div`
   display: flex;
@@ -213,7 +213,7 @@ const CopyDescription = styled.p`
   color: #fff;
 `;
 
-const Footer = () => {
+const Index = () => {
     const footerItems = useRef(null);
 
     useEffect(() => {
@@ -284,4 +284,4 @@ const Footer = () => {
     );
 };
 
-export default Footer;
+export default Index;

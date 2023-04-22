@@ -94,7 +94,7 @@ export const aboutCards = [
 export const projects = [
     {
         id: 1,
-        image: require('../assets/img/cinematika-screen-one-large.png'),
+        image: require('../assets/img/cinematika-screen.png'),
         title: 'Cinematika',
         description: 'project-description-one',
         stack: `React

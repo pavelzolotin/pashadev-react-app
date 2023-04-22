@@ -4,8 +4,8 @@ import {useTranslation} from 'react-i18next';
 
 import styled from 'styled-components';
 
-import {heroCards} from '../constants/data';
-import HeroImg from '../assets/img/hero-img.png';
+import {heroCards} from '../../utils/data';
+import HeroImg from '../../assets/img/hero-img.png';
 
 const Container = styled.div`
   display: flex;
@@ -276,7 +276,7 @@ const Img = styled.img`
   }
 `;
 
-const Hero = () => {
+const Index = () => {
     const {t} = useTranslation();
 
     const icons = useRef(null);
@@ -361,4 +361,4 @@ const Hero = () => {
     );
 };
 
-export default Hero;
+export default Index;
