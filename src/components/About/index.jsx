@@ -1,9 +1,8 @@
-import {useTranslation} from 'react-i18next';
-
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
-import {aboutCards} from '../../utils/data';
 import Card from '../Card';
+import { aboutCards } from '../../utils/data';
 
 const Container = styled.div`
   display: flex;
@@ -120,7 +119,7 @@ const Box = styled.div`
   }
 `;
 
-const Index = () => {
+const About = () => {
     const {t} = useTranslation();
 
     return (
@@ -153,4 +152,4 @@ const Index = () => {
     );
 };
 
-export default Index;
+export default About;

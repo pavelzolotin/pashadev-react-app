@@ -1,4 +1,5 @@
-import {useRef, useEffect, useCallback} from 'react';
+import { useRef, useEffect, useCallback } from 'react';
+
 import styled from 'styled-components';
 
 const CursorDot = styled.div`
@@ -28,7 +29,7 @@ const CursorDotOutline = styled(CursorDot)`
   transition: width .3s, height .3s, transform .3s;
 `;
 
-const Index = () => {
+const Cursor = () => {
     const dot = useRef(null);
     const dotOutline = useRef(null);
     const cursorVisible = useRef(true);
@@ -151,4 +152,4 @@ const Index = () => {
     );
 };
 
-export default Index;
+export default Cursor;

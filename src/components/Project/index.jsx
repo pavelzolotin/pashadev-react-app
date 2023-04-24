@@ -1,9 +1,10 @@
-import {Link} from 'react-router-dom';
-import {useTranslation} from 'react-i18next';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import styled from 'styled-components';
-import {motion} from 'framer-motion';
-import {fadeIn, staggerContainer} from '../../utils/motion';
+import { motion } from 'framer-motion';
+
+import { fadeIn, staggerContainer } from '../../utils/motion';
 
 const Box = styled.div`
   display: flex;
@@ -154,7 +155,7 @@ const Button = styled.button`
   }
 `;
 
-const Index = ({image, title, description, stack, link_first, link_second, alt}) => {
+const Project = ({image, title, description, stack, link_first, link_second, alt}) => {
     const {t} = useTranslation();
 
     return (
@@ -211,4 +212,4 @@ const Index = ({image, title, description, stack, link_first, link_second, alt})
     );
 };
 
-export default Index;
+export default Project;

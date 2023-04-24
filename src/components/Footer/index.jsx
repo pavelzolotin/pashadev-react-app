@@ -1,11 +1,11 @@
-import {useEffect, useRef} from 'react';
-import {Link} from 'react-router-dom';
+import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 import styled from 'styled-components';
 
 import Logo from '../../assets/img/logo.png';
-import {footerCards} from '../../utils/data';
-import {iconsNav} from '../../utils/data';
+import { footerCards } from '../../utils/data';
+import { iconsNav } from '../../utils/data';
 
 const Container = styled.div`
   display: flex;
@@ -213,7 +213,7 @@ const CopyDescription = styled.p`
   color: #fff;
 `;
 
-const Index = () => {
+const Footer = () => {
     const footerItems = useRef(null);
 
     useEffect(() => {
@@ -284,4 +284,4 @@ const Index = () => {
     );
 };
 
-export default Index;
+export default Footer;

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import styled, { createGlobalStyle } from 'styled-components';
 import Library from './assets/fonts/library3am.woff2';
@@ -88,7 +88,7 @@ const Container = styled.div``;
 
 function App() {
     return (
-        <BrowserRouter>
+        <>
             <GlobalStyle />
             <Cursor />
             <Container>
@@ -102,7 +102,7 @@ function App() {
                     } />
                 </Routes>
             </Container>
-        </BrowserRouter>
+        </>
     );
 }
 

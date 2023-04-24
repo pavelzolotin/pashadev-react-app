@@ -1,4 +1,4 @@
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const drawLine = keyframes`
   from {
@@ -143,7 +143,7 @@ const CardTitle = styled.h3`
   }
 `;
 
-const Index = ({title, image, alt}) => {
+const Card = ({title, image, alt}) => {
     return (
         <Box className="about__card">
             <CardBorder className="about__card__border">
@@ -178,4 +178,4 @@ const Index = ({title, image, alt}) => {
     );
 };
 
-export default Index;
+export default Card;

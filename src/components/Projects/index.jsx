@@ -1,9 +1,9 @@
-import {useTranslation} from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 import styled from 'styled-components';
 
-import {projects} from '../../utils/data';
 import Project from '../Project';
+import { projects } from '../../utils/data';
 
 const Container = styled.div`
   display: flex;
@@ -38,7 +38,7 @@ const H2 = styled.h2`
   }
 `;
 
-const Index = () => {
+const Projects = () => {
     const {t} = useTranslation();
 
     return (
@@ -58,4 +58,4 @@ const Index = () => {
     );
 };
 
-export default Index;
+export default Projects;

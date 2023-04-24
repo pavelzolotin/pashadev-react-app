@@ -276,7 +276,7 @@ const Img = styled.img`
   }
 `;
 
-const Index = () => {
+const Hero = () => {
     const {t} = useTranslation();
 
     const icons = useRef(null);
@@ -361,4 +361,4 @@ const Index = () => {
     );
 };
 
-export default Index;
+export default Hero;

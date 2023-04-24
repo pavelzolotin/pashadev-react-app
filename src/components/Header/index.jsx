@@ -1,12 +1,12 @@
-import {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom';
-import {useTranslation} from 'react-i18next';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import styled from 'styled-components';
 
 import Logo from '../../assets/img/logo.png';
-import {iconsNav} from '../../utils/data';
-import {languages} from '../../utils/data';
+import { iconsNav } from '../../utils/data';
+import { languages } from '../../utils/data';
 
 const Container = styled.div`
   display: flex;
@@ -126,7 +126,7 @@ const NavIconImg = styled.img`
   height: 100%;
 `;
 
-const Index = () => {
+const Header = () => {
     const {i18n} = useTranslation();
 
     const [sticky, setSticky] = useState(false);
@@ -201,4 +201,4 @@ const Index = () => {
     );
 };
 
-export default Index;
+export default Header;
