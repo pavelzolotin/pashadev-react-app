@@ -10,10 +10,14 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   position: relative;
-  max-width: 132rem;
+  max-width: 170rem;
   height: 100%;
   margin: 12rem auto 0 auto;
 
+  @media (min-width: 1441px) and (max-width: 1780px) {
+    max-width: 132rem;
+  }
+  
   @media (min-width: 1250px) and (max-width: 1600px) {
     max-width: 125rem;
   }
@@ -46,6 +50,10 @@ const H2 = styled.h2`
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
+
+  @media (min-width: 1780px) {
+    padding: 0 10rem;
+  }
 
   @media (max-width: 767px) {
     flex-direction: column;

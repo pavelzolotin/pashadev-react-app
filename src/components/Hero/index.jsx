@@ -12,10 +12,14 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   position: relative;
-  max-width: 132rem;
+  max-width: 170rem;
   height: 100vh;
   margin: auto;
 
+  @media (min-width: 1441px) and (max-width: 1780px) {
+    max-width: 132rem;
+  }
+  
   @media (min-width: 1250px) and (max-width: 1440px) {
     max-width: 125rem;
   }
@@ -42,9 +46,8 @@ const CardItem = styled.img`
   z-index: 1;
 
   &:nth-child(1) {
-    border-radius: 1rem;
     top: 14%;
-    left: -8%;
+    left: -4%;
 
     @media (min-width: 1250px) and (max-width: 1440px) {
       top: 7%;
@@ -54,7 +57,7 @@ const CardItem = styled.img`
 
   &:nth-child(2) {
     top: 4%;
-    left: 32%;
+    left: 34%;
 
     @media (min-width: 1250px) and (max-width: 1440px) {
       top: -4%;
@@ -64,7 +67,7 @@ const CardItem = styled.img`
 
   &:nth-child(3) {
     top: 24%;
-    left: 57%;
+    left: 60%;
 
     @media (min-width: 1250px) and (max-width: 1440px) {
       top: 20%;
@@ -73,13 +76,12 @@ const CardItem = styled.img`
 
   &:nth-child(4) {
     bottom: 23%;
-    left: 52%;
+    left: 54%;
   }
 
   &:nth-child(5) {
-    border-radius: 1rem;
     bottom: 12%;
-    left: 0;
+    left: 2%;
 
     @media (min-width: 1250px) and (max-width: 1440px) {
       bottom: 15%;
