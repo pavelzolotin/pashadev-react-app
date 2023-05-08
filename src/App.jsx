@@ -9,6 +9,8 @@ import Home from './pages/Home';
 import PageNotFound from './pages/PageNotFound';
 
 const GlobalStyle = createGlobalStyle`
+  ${Fonts};
+  
   *,
   *::before,
   *::after {
@@ -83,7 +85,6 @@ const Container = styled.div``;
 function App() {
     return (
         <>
-            <Fonts />
             <GlobalStyle />
             <Cursor />
             <Container>
