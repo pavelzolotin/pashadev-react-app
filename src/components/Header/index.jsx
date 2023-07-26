@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import styled from 'styled-components';
 
-import Logo from '../../assets/img/logo.png';
+import Logo from '../../assets/img/logo.svg';
 import { iconsNav } from '../../utils/data';
 import { languages } from '../../utils/data';
 

@@ -9,7 +9,7 @@ import Home from './pages/Home';
 import PageNotFound from './pages/PageNotFound';
 
 const GlobalStyle = createGlobalStyle`
-  ${Fonts};
+  ${Fonts}
   
   *,
   *::before,

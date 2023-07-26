@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import styled from 'styled-components';
 
-import Logo from '../../assets/img/logo.png';
+import Logo from '../../assets/img/logo.svg';
 import { footerCards } from '../../utils/data';
 import { iconsNav } from '../../utils/data';
 
