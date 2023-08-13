@@ -151,6 +151,34 @@ export const projects = [
         link_first: 'https://github.com/pavelzolotin/logitech-react-app',
         link_second: 'https://logi-logitech.netlify.app/',
         alt: 'project-logitech'
+    },
+    {
+        id: 5,
+        image: require('../assets/img/jb-screen.png'),
+        title: 'Jazz&Burg\'s',
+        description: 'project-description-five',
+        stack: `React
+                React Router v6
+                Redux-toolkit
+                TypeScript
+                Tinkoff Pay
+                Styled components`,
+        link_first: 'https://github.com/pavelzolotin/burgers-store-react-app',
+        link_second: 'https://jazzandburgs.ru',
+        alt: 'project-jazzandburgs'
+    },
+    {
+        id: 6,
+        image: require('../assets/img/domatek-screen.png'),
+        title: 'DOMATEK',
+        description: 'project-description-six',
+        stack: `React
+                React Router v6
+                TypeScript
+                Styled components`,
+        link_first: 'https://github.com/pavelzolotin/domatek-react-app',
+        link_second: 'https://domatek.ru',
+        alt: 'project-domatek'
     }
 ];
 
