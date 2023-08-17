@@ -122,7 +122,7 @@ export const projects = [
                 Styled-components
                 Material UI`,
         link_first: 'https://github.com/pavelzolotin/youtube-clone-react-app',
-        link_second: '/',
+        link_second: '',
         alt: 'project-newtube'
     },
     {

@@ -201,11 +201,14 @@ const Project = ({image, title, description, stack, link_first, link_second, alt
                             <span>Github</span>
                         </Button>
                     </Link>
-                    <Link to={link_second} target="_blank">
-                        <Button>
-                            <span>{t("project-button")}</span>
-                        </Button>
-                    </Link>
+                    {
+                        (link_second !== '') &&
+                        <Link to={link_second} target="_blank">
+                            <Button>
+                                <span>{t("project-button")}</span>
+                            </Button>
+                        </Link>
+                    }
                 </Buttons>
             </Details>
         </Box>
