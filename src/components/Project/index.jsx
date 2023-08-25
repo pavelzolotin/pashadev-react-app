@@ -196,11 +196,14 @@ const Project = ({image, title, description, stack, link_first, link_second, alt
                     as={motion.div}
                     variants={fadeIn('left', 'tween', 1, 1)}
                 >
-                    <Link to={link_first} target="_blank">
-                        <Button>
-                            <span>Github</span>
-                        </Button>
-                    </Link>
+                    {
+                        (link_first !== '') &&
+                        <Link to={link_first} target="_blank">
+                            <Button>
+                                <span>Github</span>
+                            </Button>
+                        </Link>
+                    }
                     {
                         (link_second !== '') &&
                         <Link to={link_second} target="_blank">

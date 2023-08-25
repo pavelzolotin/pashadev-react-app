@@ -176,7 +176,7 @@ export const projects = [
                 React Router v6
                 TypeScript
                 Styled components`,
-        link_first: 'https://github.com/pavelzolotin/domatek-react-app',
+        link_first: '',
         link_second: 'https://domatek.ru',
         alt: 'project-domatek'
     }
