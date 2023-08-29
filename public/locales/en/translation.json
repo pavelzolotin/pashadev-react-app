@@ -5,7 +5,7 @@
   "hero-description": "I'm a web developer and I create user interfaces",
   "hero-button": "Contact me",
   "about-title": "About me",
-  "about-description-part-one": "For more than 3 years, I am engaged in web development.\nI sincerely like to take up new tasks and understand them.\nI get great pleasure from writing code and watching the results of its implementation.\nI try to keep moving forward and don't stop at what I have learned.",
+  "about-description-part-one": "For more than 4 years, I am engaged in web development.\nI sincerely like to take up new tasks and understand them.\nI get great pleasure from writing code and watching the results of its implementation.\nI try to keep moving forward and don't stop at what I have learned.",
   "about-description-span": "\nThe technology stack I use:",
   "about-description-part-two": "\nJavaScript / TypeScript / React JS /\nNext JS / Redux / Redux Toolkit /\nSCSS / CSS Modules / Tailwind CSS /\nstyled-components / Material UI /\nNode JS / Express JS / MongoDB / PostgreSQL\n\n- I actively use the Git version control system\n- use an ESLint linter\n- to build the project files, I use Webpack\n- for hard animation, I use Framer Motion and GSAP\n- have skills in cross-browser and adaptive layout\n- experienced in working with PHP and creating customized themes on WordPress\n- also work with layouts from Figma",
   "projects-title": "Examples of some work",
