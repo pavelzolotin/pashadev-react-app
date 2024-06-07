@@ -164,18 +164,15 @@ export const projects = [
                 Tinkoff Pay
                 Styled components`,
         link_first: 'https://github.com/pavelzolotin/burgers-store-react-app',
-        link_second: 'https://jazzandburgs.ru',
+        link_second: 'https://jazzandburgs.netlify.app',
         alt: 'project-jazzandburgs'
     },
     {
         id: 6,
         image: require('../assets/img/domatek-screen.png'),
-        title: 'DOMATEK',
+        title: 'ДОМАТЕК',
         description: 'project-description-six',
-        stack: `React
-                React Router v6
-                TypeScript
-                Styled components`,
+        stack: `Next JS`,
         link_first: '',
         link_second: 'https://domatek.ru',
         alt: 'project-domatek'

@@ -9,12 +9,12 @@
   "about-description-span": "\nСтек технологий, который я использую:",
   "about-description-part-two": "\nJavaScript / TypeScript / React JS /\nNext JS / Redux / Redux Toolkit /\nSCSS / CSS Modules / Tailwind CSS /\nstyled-components / Material UI /\nNode JS / Express JS / MongoDB / PostgreSQL\n\n- активно использую систему контроля версиями Git\n- использую линтер ESLint\n- для сборки файлов проекта, пользуюсь Webpack\n- для сложной анимации, использую Framer Motion и GSAP\n- обладаю навыками кросс-браузерной и адаптивной вёрстки\n- имею опыт работы с PHP и созданию кастомных тем на WordPress\n- также работаю с макетами из Figma",
   "projects-title": "Примеры некоторых работ",
-  "project-description-one": "React-приложение с карточками фильмов, запрашиваемых с API",
+  "project-description-one": "Приложение с карточками фильмов, запрашиваемых с API Кинопоиска",
   "project-description-two": "Клон YouTube, созданный на MERN стеке",
   "project-description-three": "Приложение о VR-девайсах построенное на Next.js",
   "project-description-four": "Интернет-магазин компьютерной периферии Logitech",
   "project-description-five": "Приложение для бургерной из Екатеринбурга",
-  "project-description-six": "Приложение для компании по продаже интерьерных решений для дома",
+  "project-description-six": "Приложение для компании по установке натяжных потолков в Екатеринбурге",
   "project-stack": "Стек",
   "project-button": "Демо"
 }

@@ -277,7 +277,7 @@ const Footer = () => {
                     <TextDescription>Eat. Sleep. Code. Repeat</TextDescription>
                 </Text>
                 <Copyright>
-                    <CopyDescription>© 2019 - 2023 PASHADEV</CopyDescription>
+                    <CopyDescription>© 2019 - 2024 PASHADEV</CopyDescription>
                 </Copyright>
             </Wrapper>
         </Container>
